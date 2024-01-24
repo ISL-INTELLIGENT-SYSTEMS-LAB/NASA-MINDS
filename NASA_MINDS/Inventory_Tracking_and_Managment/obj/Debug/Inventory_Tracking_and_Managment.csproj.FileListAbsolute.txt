@@ -1,0 +1,11 @@
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe.config
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.AssemblyReference.cache
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Properties.Resources.resources
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.GenerateResource.cache
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CoreCompileInputs.cache
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Login_Form.resources
+C:\Users\forth\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Menu_Form.resources
