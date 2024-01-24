@@ -20,37 +20,37 @@ namespace Inventory_Tracking_and_Managment
         private void Btn_FindItems_Click(object sender, EventArgs e)
         {
             // Open the FindItems_Form and close the Menu_Form when the Find Items button is clicked
-            Hide();
-            var FindItems_Form = new FindItems_Form();
-            FindItems_Form.Closed += (s, args) => Close();
-            FindItems_Form.Show();
+            // Hide();
+            // var FindItems_Form = new FindItems_Form();
+            // FindItems_Form.Closed += (s, args) => Close();
+            // FindItems_Form.Show();
         }
 
         private void Btn_ShoppingList_Click(object sender, EventArgs e)
         {
             // Open the ShoppingList_Form and close the Menu_Form when the Shopping List button is clicked
-            Hide();
-            var ShoppingList_Form = new ShoppingList_Form();
-            ShoppingList_Form.Closed += (s, args) => Close();
-            ShoppingList_Form.Show();
+            // Hide();
+            // var ShoppingList_Form = new ShoppingList_Form();
+            // ShoppingList_Form.Closed += (s, args) => Close();
+            // ShoppingList_Form.Show();
         }
 
         private void Btn_Modify_Items_Click(object sender, EventArgs e)
         {
             // Open the Modify_Items_Form and close the Menu_Form when the Modify Items button is clicked
-            Hide();
-            var Modify_Items_Form = new Modify_Items_Form();
-            Modify_Items_Form.Closed += (s, args) => Close();
-            Modify_Items_Form.Show();
+            // Hide();
+            // var Modify_Items_Form = new Modify_Items_Form();
+            // Modify_Items_Form.Closed += (s, args) => Close();
+            // Modify_Items_Form.Show();
         }
 
         private void Btn_IngestItems_Click(object sender, EventArgs e)
         {
             // Open the IngestItems_Form and close the Menu_Form when the Ingest Items button is clicked
-            Hide();
-            var IngestItems_Form = new IngestItems_Form();
-            IngestItems_Form.Closed += (s, args) => Close();
-            IngestItems_Form.Show();
+            // Hide();
+            // var IngestItems_Form = new IngestItems_Form();
+            // IngestItems_Form.Closed += (s, args) => Close();
+            // IngestItems_Form.Show();
         }
 
         private void Btn_Account_Click(object sender, EventArgs e)
