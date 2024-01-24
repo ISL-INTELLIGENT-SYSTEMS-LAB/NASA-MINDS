@@ -15,15 +15,15 @@ namespace Inventory_Tracking_and_Managment
         public Login_Form()
         {
             InitializeComponent();
-
-            Menu_Form menu_Form = new Menu_Form();
-            menu_Form.ShowDialog();
-            this.Hide();
         }
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            return;
+            // Open the Menu_Form and close the Login_Form when the Login button is clicked
+            Hide();
+            var Menu_Form = new Menu_Form();
+            Menu_Form.Closed += (s, args) => Close();
+            Menu_Form.Show();
         }
 
         private void Btn_Forgot_Click(object sender, EventArgs e)
