@@ -42,10 +42,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.L_Filename = new System.Windows.Forms.Label();
             this.TB_Email = new System.Windows.Forms.TextBox();
             this.TB_Phone = new System.Windows.Forms.TextBox();
             this.TB_Title = new System.Windows.Forms.TextBox();
-            this.TB_Filename = new System.Windows.Forms.TextBox();
             this.TB_Name = new System.Windows.Forms.TextBox();
             this.Btn_Submit = new System.Windows.Forms.Button();
             this.Btn_UpdatePic = new System.Windows.Forms.Button();
@@ -197,10 +197,10 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Controls.Add(this.L_Filename);
             this.panel2.Controls.Add(this.TB_Email);
             this.panel2.Controls.Add(this.TB_Phone);
             this.panel2.Controls.Add(this.TB_Title);
-            this.panel2.Controls.Add(this.TB_Filename);
             this.panel2.Controls.Add(this.TB_Name);
             this.panel2.Controls.Add(this.Btn_Submit);
             this.panel2.Controls.Add(this.Btn_UpdatePic);
@@ -213,6 +213,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(716, 406);
             this.panel2.TabIndex = 13;
+            // 
+            // L_Filename
+            // 
+            this.L_Filename.AutoSize = true;
+            this.L_Filename.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.L_Filename.Location = new System.Drawing.Point(102, 357);
+            this.L_Filename.Name = "L_Filename";
+            this.L_Filename.Size = new System.Drawing.Size(48, 13);
+            this.L_Filename.TabIndex = 17;
+            this.L_Filename.Text = "File Path";
             // 
             // TB_Email
             // 
@@ -235,13 +245,6 @@
             this.TB_Title.Size = new System.Drawing.Size(100, 20);
             this.TB_Title.TabIndex = 14;
             // 
-            // TB_Filename
-            // 
-            this.TB_Filename.Location = new System.Drawing.Point(109, 355);
-            this.TB_Filename.Name = "TB_Filename";
-            this.TB_Filename.Size = new System.Drawing.Size(172, 20);
-            this.TB_Filename.TabIndex = 13;
-            // 
             // TB_Name
             // 
             this.TB_Name.Location = new System.Drawing.Point(438, 61);
@@ -261,9 +264,9 @@
             // 
             // Btn_UpdatePic
             // 
-            this.Btn_UpdatePic.Location = new System.Drawing.Point(28, 353);
+            this.Btn_UpdatePic.Location = new System.Drawing.Point(28, 352);
             this.Btn_UpdatePic.Name = "Btn_UpdatePic";
-            this.Btn_UpdatePic.Size = new System.Drawing.Size(75, 23);
+            this.Btn_UpdatePic.Size = new System.Drawing.Size(68, 23);
             this.Btn_UpdatePic.TabIndex = 10;
             this.Btn_UpdatePic.Text = "Update Pic";
             this.Btn_UpdatePic.UseVisualStyleBackColor = true;
@@ -380,6 +383,6 @@
         private System.Windows.Forms.TextBox TB_Email;
         private System.Windows.Forms.TextBox TB_Phone;
         private System.Windows.Forms.TextBox TB_Title;
-        private System.Windows.Forms.TextBox TB_Filename;
+        private System.Windows.Forms.Label L_Filename;
     }
 }

@@ -46,7 +46,7 @@ namespace Inventory_Tracking_and_Managment
                 PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
                 PB_Edit.BackgroundImage = new Bitmap(openFileDialog1.FileName);
                 
-                TB_Filename.Text= openFileDialog1.FileName;
+                L_Filename.Text= openFileDialog1.FileName;
             }
         }
 
