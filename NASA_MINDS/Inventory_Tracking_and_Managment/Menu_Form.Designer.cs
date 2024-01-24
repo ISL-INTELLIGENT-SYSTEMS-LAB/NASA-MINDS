@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_FindItems = new System.Windows.Forms.Button();
-            this.Btn_ShoppingList = new System.Windows.Forms.Button();
-            this.Btn_Modify_Items = new System.Windows.Forms.Button();
-            this.Btn_IngestItems = new System.Windows.Forms.Button();
-            this.Btn_Account = new System.Windows.Forms.Button();
-            this.Btn_Logout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -51,83 +51,77 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_FindItems
+            // button1
             // 
-            this.Btn_FindItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_FindItems.Location = new System.Drawing.Point(0, 0);
-            this.Btn_FindItems.Name = "Btn_FindItems";
-            this.Btn_FindItems.Size = new System.Drawing.Size(474, 236);
-            this.Btn_FindItems.TabIndex = 4;
-            this.Btn_FindItems.Text = "Find Items";
-            this.Btn_FindItems.UseVisualStyleBackColor = true;
-            this.Btn_FindItems.Click += new System.EventHandler(this.Btn_FindItems_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(474, 236);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Find Items";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // Btn_ShoppingList
+            // button2
             // 
-            this.Btn_ShoppingList.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ShoppingList.Location = new System.Drawing.Point(514, 3);
-            this.Btn_ShoppingList.Name = "Btn_ShoppingList";
-            this.Btn_ShoppingList.Size = new System.Drawing.Size(474, 236);
-            this.Btn_ShoppingList.TabIndex = 5;
-            this.Btn_ShoppingList.Text = "Shopping Lists";
-            this.Btn_ShoppingList.UseVisualStyleBackColor = true;
-            this.Btn_ShoppingList.Click += new System.EventHandler(this.Btn_ShoppingList_Click);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(514, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(474, 236);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Shopping Lists";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // Btn_Modify_Items
+            // button3
             // 
-            this.Btn_Modify_Items.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Modify_Items.Location = new System.Drawing.Point(3, 311);
-            this.Btn_Modify_Items.Name = "Btn_Modify_Items";
-            this.Btn_Modify_Items.Size = new System.Drawing.Size(474, 236);
-            this.Btn_Modify_Items.TabIndex = 6;
-            this.Btn_Modify_Items.Text = "Modify Items";
-            this.Btn_Modify_Items.UseVisualStyleBackColor = true;
-            this.Btn_Modify_Items.Click += new System.EventHandler(this.Btn_Modify_Items_Click);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(3, 311);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(474, 236);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Modify Items";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // Btn_IngestItems
+            // button4
             // 
-            this.Btn_IngestItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_IngestItems.Location = new System.Drawing.Point(517, 311);
-            this.Btn_IngestItems.Name = "Btn_IngestItems";
-            this.Btn_IngestItems.Size = new System.Drawing.Size(474, 236);
-            this.Btn_IngestItems.TabIndex = 7;
-            this.Btn_IngestItems.Text = "Ingest Items";
-            this.Btn_IngestItems.UseVisualStyleBackColor = true;
-            this.Btn_IngestItems.Click += new System.EventHandler(this.Btn_IngestItems_Click);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(517, 311);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(474, 236);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Ingest Items";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // Btn_Account
+            // button5
             // 
-            this.Btn_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Account.Location = new System.Drawing.Point(3, 608);
-            this.Btn_Account.Name = "Btn_Account";
-            this.Btn_Account.Size = new System.Drawing.Size(474, 236);
-            this.Btn_Account.TabIndex = 8;
-            this.Btn_Account.Text = "Account";
-            this.Btn_Account.UseVisualStyleBackColor = true;
-            this.Btn_Account.Click += new System.EventHandler(this.Btn_Account_Click);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 608);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(474, 236);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Account";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // Btn_Logout
+            // button6
             // 
-            this.Btn_Logout.BackColor = System.Drawing.Color.IndianRed;
-            this.Btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Logout.Location = new System.Drawing.Point(517, 611);
-            this.Btn_Logout.Name = "Btn_Logout";
-            this.Btn_Logout.Size = new System.Drawing.Size(474, 236);
-            this.Btn_Logout.TabIndex = 9;
-            this.Btn_Logout.Text = "Log Out";
-            this.Btn_Logout.UseVisualStyleBackColor = false;
-            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            this.button6.BackColor = System.Drawing.Color.IndianRed;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(517, 611);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(474, 236);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Log Out";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.Btn_Logout);
-            this.panel1.Controls.Add(this.Btn_Modify_Items);
-            this.panel1.Controls.Add(this.Btn_IngestItems);
-            this.panel1.Controls.Add(this.Btn_FindItems);
-            this.panel1.Controls.Add(this.Btn_ShoppingList);
-            this.panel1.Controls.Add(this.Btn_Account);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(154, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 850);
@@ -156,12 +150,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Btn_FindItems;
-        private System.Windows.Forms.Button Btn_ShoppingList;
-        private System.Windows.Forms.Button Btn_Modify_Items;
-        private System.Windows.Forms.Button Btn_IngestItems;
-        private System.Windows.Forms.Button Btn_Account;
-        private System.Windows.Forms.Button Btn_Logout;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
     }
 }
