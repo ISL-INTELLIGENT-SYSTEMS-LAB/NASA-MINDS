@@ -111,6 +111,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingListImport_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingListImport_Form.Designer.cs">
+      <DependentUpon>ShoppingListImport_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingList_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingList_Form.Designer.cs">
+      <DependentUpon>ShoppingList_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Account_Form.resx">
       <DependentUpon>Account_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +148,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShoppingListImport_Form.resx">
+      <DependentUpon>ShoppingListImport_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingList_Form.resx">
+      <DependentUpon>ShoppingList_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\Dapper.CommandDefinition.datasource" />
     <None Include="Properties\DataSources\Dapper.CustomPropertyTypeMap.datasource" />
     <None Include="Properties\DataSources\Dapper.DbString.datasource" />
@@ -158,6 +176,7 @@
     <None Include="Properties\DataSources\Dapper.SqlMapper+TypeHandler`1.datasource" />
     <None Include="Properties\DataSources\Dapper.SqlMapper+UdtTypeHandler.datasource" />
     <None Include="Properties\DataSources\Dapper.SqlMapper.datasource" />
+    <None Include="Properties\DataSources\NASA_MINDS_Library.sqliteDataAccess.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

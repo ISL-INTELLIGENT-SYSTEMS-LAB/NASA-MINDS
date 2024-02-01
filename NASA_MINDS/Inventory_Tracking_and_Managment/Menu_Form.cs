@@ -29,10 +29,10 @@ namespace Inventory_Tracking_and_Managment
         private void Btn_ShoppingList_Click(object sender, EventArgs e)
         {
             // Open the ShoppingList_Form and close the Menu_Form when the Shopping List button is clicked
-            // Hide();
-            // var ShoppingList_Form = new ShoppingList_Form();
-            // ShoppingList_Form.Closed += (s, args) => Close();
-            // ShoppingList_Form.Show();
+            Hide();
+            var ShoppingList_Form = new ShoppingList_Form();
+            ShoppingList_Form.Closed += (s, args) => Close();
+            ShoppingList_Form.Show();
         }
 
         private void Btn_Modify_Items_Click(object sender, EventArgs e)
