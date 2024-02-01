@@ -17,8 +17,18 @@ namespace Inventory_Tracking_and_Managment
         public Account_Form()
         {
             InitializeComponent();
-            panel1.Show();
-            panel2.Hide();
+            Btn_UpdatePic.Visible = false;
+            Btn_Submit.Visible = false;
+            L_Filename.Visible = false;
+            Btn_ChangePassword.Visible = false;
+
+            TB_NameResize();
+
+            TB_TitleResize();
+
+            TB_PhoneResize();
+
+            TB_EmailResize();
         }
 
         private void Btn_UpdatePic_Click(object sender, EventArgs e)
@@ -43,25 +53,114 @@ namespace Inventory_Tracking_and_Managment
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box
-                PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
                 PB_Edit.BackgroundImage = new Bitmap(openFileDialog1.FileName);
-                
-                L_Filename.Text= openFileDialog1.FileName;
+
+                L_Filename.Text = openFileDialog1.FileName;
             }
         }
 
         private void Btn_EditProfile_Click(object sender, EventArgs e)
         {
-            L_Name.Text = "Hernandez, Luis E.";
-            panel2.Show();
-            panel1.Hide();
+            Btn_EditProfile.Visible = false;
+            Btn_Submit.Visible = true;
+            Btn_UpdatePic.Visible = true;
+            L_Filename.Visible = true;
+            Btn_Submit.Enabled = true;
+            Btn_Back.Visible = false;
+            Btn_ChangePassword.Visible = true;
+
+            TB_Name.Enabled = true;
+            TB_Name.ReadOnly = false;
+
+            TB_Title.Enabled = true;
+            TB_Title.ReadOnly = false;
+
+            TB_Phone.Enabled = true;
+            TB_Phone.ReadOnly = false;
+
+            TB_Email.Enabled = true;
+            TB_Email.ReadOnly = false;
         }
 
         private void Btn_Submit_Click(object sender, EventArgs e)
         {
-            L_Name.Text = "Hernandez, Luis E.";
-            panel1.Show();
-            panel2.Hide();
+            TB_Name.Enabled = false;
+            TB_Name.ReadOnly = true;
+            TB_NameResize();
+
+            TB_Title.Enabled = false;
+            TB_Title.ReadOnly = true;
+            TB_TitleResize();
+
+            TB_Phone.Enabled = false;
+            TB_Phone.ReadOnly = true;
+            TB_PhoneResize();
+
+            TB_Email.Enabled = false;
+            TB_Email.ReadOnly = true;
+            TB_EmailResize();
+
+            Btn_UpdatePic.Visible = false;
+            Btn_Submit.Visible = false;
+            Btn_EditProfile.Visible = true;
+            L_Filename.Visible = false;
+            Btn_Back.Visible = true;
+            Btn_ChangePassword.Visible = false;
+        }
+
+        private void TB_NameResize()
+        {
+            Size namesize = TextRenderer.MeasureText(TB_Name.Text, TB_Name.Font);
+
+            if (namesize.Width > 561) { TB_Name.Width = 561; }
+            else { TB_Name.Width = namesize.Width; }
+
+            TB_Name.SelectionStart = 0;
+        }
+
+        private void TB_TitleResize()
+        {
+            Size titlesize = TextRenderer.MeasureText(TB_Title.Text, TB_Title.Font);
+
+            if (titlesize.Width > 561) { TB_Title.Width = 561; }
+            else { TB_Title.Width = titlesize.Width; }
+
+            TB_Title.SelectionStart = 0;
+        }
+
+        private void TB_PhoneResize()
+        {
+            Size phonesize = TextRenderer.MeasureText(TB_Phone.Text, TB_Phone.Font);
+
+            if (phonesize.Width > 561) { TB_Phone.Width = 561; }
+            else { TB_Phone.Width = phonesize.Width; }
+
+            TB_Phone.SelectionStart = 0;
+        }
+
+        private void TB_EmailResize()
+        {
+            Size emailsize = TextRenderer.MeasureText(TB_Email.Text, TB_Email.Font);
+
+            if (emailsize.Width > 561) { TB_Email.Width = 561; }
+            else { TB_Email.Width = emailsize.Width; }
+
+            TB_Email.SelectionStart = 0;
+        }
+
+        private void Btn_Back_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var Menu_Form = new Menu_Form();
+            Menu_Form.Closed += (s, args) => Close();
+            Menu_Form.Show();
+        }
+
+        private void Btn_ChangePassword_Click(object sender, EventArgs e)
+        {
+            var ChangePassword_Form = new ChangePassword_Form();
+            ChangePassword_Form.Closed += (s, args) => Close();
+            ChangePassword_Form.Show();
         }
     }
 }
