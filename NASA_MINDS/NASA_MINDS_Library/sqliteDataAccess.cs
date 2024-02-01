@@ -51,5 +51,28 @@ namespace NASA_MINDS_Library
 
             }
         }
+
+        // Populate the datagridview for items
+        public static string PopulateData(string itemID)
+        {
+
+            using (var con = new SQLiteConnection(LoadConnectionString())) {con.Open();
+
+                // Create a command to select the account from the database
+                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE itemID=@itemID", con);
+                cmd.Parameters.AddWithValue("@itemID", itemID);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                if (!rdr.HasRows)
+                {
+                    // Close the connection to the database and return null
+                    rdr.Close();
+                    con.Close();
+                    return null;
+                }
+
+                return rdr.ToString();
+            }
+        }
     }
 }
