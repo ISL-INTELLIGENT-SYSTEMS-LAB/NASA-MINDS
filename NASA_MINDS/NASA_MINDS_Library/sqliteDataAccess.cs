@@ -28,6 +28,14 @@ namespace NASA_MINDS_Library
                 cmd.Parameters.AddWithValue("@username", username);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
 
+                if (!rdr.HasRows)
+                {
+                    // Close the connection to the database and return null
+                    rdr.Close();
+                    con.Close();
+                    return null;
+                }
+
                 // Create an account object from the data
                 Account account;
 
