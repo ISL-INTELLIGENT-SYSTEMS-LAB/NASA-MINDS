@@ -19,11 +19,11 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_FindItems_Click(object sender, EventArgs e)
         {
-            // Open the FindItems_Form and close the Menu_Form when the Find Items button is clicked
-            // Hide();
-            // var FindItems_Form = new FindItems_Form();
-            // FindItems_Form.Closed += (s, args) => Close();
-            // FindItems_Form.Show();
+            //Open the FindItems_Form and close the Menu_Form when the Find Items button is clicked
+            Hide();
+            var FindItems_Form = new FindItems_Form();
+            FindItems_Form.Closed += (s, args) => Close();
+            FindItems_Form.Show();
         }
 
         private void Btn_ShoppingList_Click(object sender, EventArgs e)

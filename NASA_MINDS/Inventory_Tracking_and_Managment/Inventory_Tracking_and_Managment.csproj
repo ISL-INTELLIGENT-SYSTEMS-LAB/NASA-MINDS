@@ -85,6 +85,18 @@
     <Compile Include="Account_Form.Designer.cs">
       <DependentUpon>Account_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_Form.Designer.cs">
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindItems_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindItems_Form.Designer.cs">
+      <DependentUpon>FindItems_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     <EmbeddedResource Include="Account_Form.resx">
       <DependentUpon>Account_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword_Form.resx">
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindItems_Form.resx">
+      <DependentUpon>FindItems_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,7 +136,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Dapper.CommandDefinition.datasource" />
+    <None Include="Properties\DataSources\Dapper.CustomPropertyTypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.DbString.datasource" />
+    <None Include="Properties\DataSources\Dapper.DefaultTypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.DynamicParameters.datasource" />
+    <None Include="Properties\DataSources\Dapper.ExplicitConstructorAttribute.datasource" />
+    <None Include="Properties\DataSources\Dapper.IWrappedDataReader.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+GridReader.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ICustomQueryParameter.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+Identity.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IDynamicParameters.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IMemberMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IParameterCallbacks.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IParameterLookup.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ITypeHandler.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ITypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+Settings.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+StringTypeHandler`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+TypeHandlerCache`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+TypeHandler`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+UdtTypeHandler.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +179,9 @@
       <Project>{4c70d438-e887-470c-9328-201264944afa}</Project>
       <Name>NASA_MINDS_Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
