@@ -9,13 +9,14 @@ namespace NASA_MINDS_Library
     public class Account
     {
         // Constructor for the Account class
-        public Account(int accountID, string username, string password, string title, string contact) 
+        public Account(int accountID, string username, string password, string title, string contact, string picture) 
         { 
             AccountID = accountID;
             Username = username;
             Password = password;
             Title = title;
             Contact = contact;
+            Picture = picture;
         }
 
         // Properties for the Account class
@@ -24,5 +25,6 @@ namespace NASA_MINDS_Library
         public string Password { get; set; }
         public string Title { get; set; }
         public string Contact { get; set; }
+        public string Picture { get; set; }
     }
 }
