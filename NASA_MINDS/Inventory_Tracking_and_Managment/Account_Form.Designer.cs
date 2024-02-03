@@ -40,15 +40,15 @@
             this.TB_Name = new System.Windows.Forms.TextBox();
             this.Btn_Submit = new System.Windows.Forms.Button();
             this.Btn_UpdatePic = new System.Windows.Forms.Button();
+            this.PB_ProfilePic = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.PB_Edit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_ProfilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@
             this.panel2.Controls.Add(this.TB_Name);
             this.panel2.Controls.Add(this.Btn_Submit);
             this.panel2.Controls.Add(this.Btn_UpdatePic);
-            this.panel2.Controls.Add(this.PB_Edit);
+            this.panel2.Controls.Add(this.PB_ProfilePic);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
@@ -186,6 +186,16 @@
             this.Btn_UpdatePic.UseVisualStyleBackColor = false;
             this.Btn_UpdatePic.Click += new System.EventHandler(this.Btn_UpdatePic_Click);
             // 
+            // PB_ProfilePic
+            // 
+            this.PB_ProfilePic.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background1;
+            this.PB_ProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PB_ProfilePic.Location = new System.Drawing.Point(52, 63);
+            this.PB_ProfilePic.Name = "PB_ProfilePic";
+            this.PB_ProfilePic.Size = new System.Drawing.Size(278, 292);
+            this.PB_ProfilePic.TabIndex = 9;
+            this.PB_ProfilePic.TabStop = false;
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -235,16 +245,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // PB_Edit
-            // 
-            this.PB_Edit.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background1;
-            this.PB_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PB_Edit.Location = new System.Drawing.Point(52, 63);
-            this.PB_Edit.Name = "PB_Edit";
-            this.PB_Edit.Size = new System.Drawing.Size(278, 292);
-            this.PB_Edit.TabIndex = 9;
-            this.PB_Edit.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -272,7 +272,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_ProfilePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TB_Name;
         private System.Windows.Forms.Button Btn_Submit;
-        private System.Windows.Forms.PictureBox PB_Edit;
+        private System.Windows.Forms.PictureBox PB_ProfilePic;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

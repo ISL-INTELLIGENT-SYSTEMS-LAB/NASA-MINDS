@@ -26,6 +26,9 @@ namespace Inventory_Tracking_and_Managment
             string[] contact = Login_Form.account.Contact.Split(',');
 
             // Load the account information into the textboxes from the database
+            string currentDir = Environment.CurrentDirectory;
+            string imagePath = currentDir + "\\images\\" + Login_Form.account.Picture;
+            PB_ProfilePic.BackgroundImage = Image.FromFile(imagePath);
             TB_Name.Text = Login_Form.account.Username;
             TB_Title.Text = Login_Form.account.Title;
             TB_Phone.Text = contact[0];
@@ -60,7 +63,7 @@ namespace Inventory_Tracking_and_Managment
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box
-                PB_Edit.BackgroundImage = new Bitmap(openFileDialog1.FileName);
+                PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
 
                 L_Filename.Text = openFileDialog1.FileName;
             }
