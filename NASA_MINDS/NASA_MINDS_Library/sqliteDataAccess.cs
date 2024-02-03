@@ -42,27 +42,31 @@ namespace NASA_MINDS_Library
                 // Read the data from the database
                 rdr.Read();
                 // Create an account object from the data
-                account = new Account(Convert.ToInt32(rdr["accountID"]), rdr["username"].ToString(), rdr["password"].ToString(), rdr["title"].ToString(), rdr["contact"].ToString());
+                account = new Account(Convert.ToInt32(rdr["accountID"]), 
+                                      rdr["username"].ToString(), 
+                                      rdr["password"].ToString(), 
+                                      rdr["title"].ToString(), 
+                                      rdr["contact"].ToString());
                 rdr.Close();
 
                 // Close the connection to the database and return the account object
                 con.Close();
                 return account;
-
             }
         }
 
         // Populate the datagridview for items
-        public static string PopulateData(string itemID)
+        public static Item PopulateData(string itemID)
         {
-
-            using (var con = new SQLiteConnection(LoadConnectionString())) {con.Open();
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString())){con.Open();
 
                 // Create a command to select the account from the database
-                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE itemID=@itemID", con);
+                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE ItemID=@itemID", con);
                 cmd.Parameters.AddWithValue("@itemID", itemID);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
 
+                // If the item is not found, return null
                 if (!rdr.HasRows)
                 {
                     // Close the connection to the database and return null
@@ -71,7 +75,23 @@ namespace NASA_MINDS_Library
                     return null;
                 }
 
-                return rdr.ToString();
+                Item item;
+
+                // Read the data from the database and create an item object
+                rdr.Read();
+                item = new Item(Convert.ToInt32(rdr["ItemID"]), 
+                                rdr["itemName"].ToString(), 
+                                rdr["itemDescription"].ToString(), 
+                                rdr["serial#"].ToString(), 
+                                Convert.ToInt32(rdr["conditionalStatus"]), 
+                                rdr["RN#"].ToString(), 
+                                rdr["imageLocation"].ToString(),
+                                Convert.ToInt32(rdr["RFID_Tag"]));
+                rdr.Close();
+
+                // Close the connection to the database and return the item object
+                con.Close();
+                return item;
             }
         }
     }
