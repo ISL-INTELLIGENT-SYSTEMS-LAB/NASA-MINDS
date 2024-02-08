@@ -83,9 +83,9 @@ namespace NASA_MINDS_Library
                 item = new Item(Convert.ToInt32(rdr["ItemID"]), 
                                 rdr["itemName"].ToString(), 
                                 rdr["itemDescription"].ToString(), 
-                                rdr["serial#"].ToString(), 
+                                rdr["serial"].ToString(), 
                                 Convert.ToInt32(rdr["conditionalStatus"]), 
-                                rdr["RN#"].ToString(), 
+                                rdr["RN"].ToString(), 
                                 rdr["imageLocation"].ToString(),
                                 Convert.ToInt32(rdr["RFID_Tag"]));
                 rdr.Close();
@@ -99,7 +99,7 @@ namespace NASA_MINDS_Library
         public static List<Item> GetAllItems()
         {
             // Open a connection to the database
-            using (var con = new SQLiteConnection(LoadConnectionString())) { con.Open();
+            using (var con = new SQLiteConnection(LoadConnectionString())){con.Open();
 
                 // Create a command to select all items from the database
                 var cmd = new SQLiteCommand("SELECT * FROM Items", con);
@@ -114,9 +114,9 @@ namespace NASA_MINDS_Library
                     items.Add(new Item(Convert.ToInt32(rdr["ItemID"]),
                                        rdr["itemName"].ToString(),
                                        rdr["itemDescription"].ToString(),
-                                       rdr["serial#"].ToString(),
+                                       rdr["serial"].ToString(),
                                        Convert.ToInt32(rdr["conditionalStatus"]),
-                                       rdr["RN#"].ToString(),
+                                       rdr["RN"].ToString(),
                                        rdr["imageLocation"].ToString(),
                                        Convert.ToInt32(rdr["RFID_Tag"])));
 
@@ -125,6 +125,30 @@ namespace NASA_MINDS_Library
                 rdr.Close();
                 con.Close();
                 return items;
+            }
+        }
+
+
+        public static void UpdateItem(int itemID, string itemName, string itemDescription, string serial, int conditionalStatus, string RN, string imageLocation, int RFID_Tag) 
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString())){con.Open();
+
+                // Create a command to update the item in the database
+                var cmd = new SQLiteCommand("UPDATE Items SET itemName=@itemName, itemDescription=@itemDescription, serial=@serial, conditionalStatus=@conditionalStatus, RN=@RN, imageLocation=@imageLocation, RFID_Tag=@RFID_Tag WHERE itemID=@itemID", con);
+                cmd.Parameters.AddWithValue("@itemID", itemID);
+                cmd.Parameters.AddWithValue("@itemName", itemName);
+                cmd.Parameters.AddWithValue("@itemDescription", itemDescription);
+                cmd.Parameters.AddWithValue("@serial", serial);
+                cmd.Parameters.AddWithValue("@conditionalStatus", conditionalStatus);
+                cmd.Parameters.AddWithValue("@RN", RN);
+                cmd.Parameters.AddWithValue("@imageLocation", imageLocation);
+                cmd.Parameters.AddWithValue("@RFID_Tag", RFID_Tag);
+
+                // Execute the command and close the connection to the database
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
             }
         }
     }
