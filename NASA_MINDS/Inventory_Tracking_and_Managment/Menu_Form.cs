@@ -38,10 +38,10 @@ namespace Inventory_Tracking_and_Managment
         private void Btn_Modify_Items_Click(object sender, EventArgs e)
         {
             // Open the Modify_Items_Form and close the Menu_Form when the Modify Items button is clicked
-            // Hide();
-            // var Modify_Items_Form = new Modify_Items_Form();
-            // Modify_Items_Form.Closed += (s, args) => Close();
-            // Modify_Items_Form.Show();
+            Hide();
+            var ModifyItems_Form = new ModifyItems_Form();
+            ModifyItems_Form.Closed += (s, args) => Close();
+            ModifyItems_Form.Show();
         }
 
         private void Btn_IngestItems_Click(object sender, EventArgs e)
