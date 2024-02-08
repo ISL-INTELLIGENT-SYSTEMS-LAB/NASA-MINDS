@@ -43,6 +43,7 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_UpdatePic_Click(object sender, EventArgs e)
         {
+            // Open file dialog to choose image
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
@@ -62,15 +63,15 @@ namespace Inventory_Tracking_and_Managment
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // display image in picture box
+                // Display image in picture box and display file name
                 PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
-
                 L_Filename.Text = openFileDialog1.FileName;
             }
         }
 
         private void Btn_EditProfile_Click(object sender, EventArgs e)
         {
+            // Enable input boxes for modification
             Btn_EditProfile.Visible = false;
             Btn_Submit.Visible = true;
             Btn_UpdatePic.Visible = true;
@@ -79,15 +80,13 @@ namespace Inventory_Tracking_and_Managment
             Btn_Back.Visible = false;
             Btn_ChangePassword.Visible = true;
 
+            // Enable the textboxes for editing
             TB_Name.Enabled = true;
             TB_Name.ReadOnly = false;
-
             TB_Title.Enabled = true;
             TB_Title.ReadOnly = false;
-
             TB_Phone.Enabled = true;
             TB_Phone.ReadOnly = false;
-
             TB_Email.Enabled = true;
             TB_Email.ReadOnly = false;
         }
