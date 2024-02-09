@@ -65,7 +65,7 @@ namespace Inventory_Tracking_and_Managment
             {
                 // Display image in picture box and display file name
                 PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
-                L_Filename.Text = openFileDialog1.FileName;
+                L_Filename.Text = System.IO.Path.GetFileName(openFileDialog1.FileName);
             }
         }
 
@@ -82,39 +82,58 @@ namespace Inventory_Tracking_and_Managment
 
             // Enable the textboxes for editing
             TB_Name.Enabled = true;
-            TB_Name.ReadOnly = false;
             TB_Title.Enabled = true;
-            TB_Title.ReadOnly = false;
             TB_Phone.Enabled = true;
-            TB_Phone.ReadOnly = false;
             TB_Email.Enabled = true;
+            TB_Name.ReadOnly = false;
+            TB_Title.ReadOnly = false;
+            TB_Phone.ReadOnly = false;
             TB_Email.ReadOnly = false;
         }
 
         private void Btn_Submit_Click(object sender, EventArgs e)
         {
-            TB_Name.Enabled = false;
-            TB_Name.ReadOnly = true;
+            // Resize text boxes to fit new labels
             TB_NameResize();
-
-            TB_Title.Enabled = false;
-            TB_Title.ReadOnly = true;
             TB_TitleResize();
-
-            TB_Phone.Enabled = false;
-            TB_Phone.ReadOnly = true;
             TB_PhoneResize();
-
-            TB_Email.Enabled = false;
-            TB_Email.ReadOnly = true;
             TB_EmailResize();
 
+            // Disable the textboxes for submission
+            TB_Name.Enabled = false;
+            TB_Title.Enabled = false;
+            TB_Phone.Enabled = false;
+            TB_Email.Enabled = false;
+
+            // Hide the Submit button, Update Picture button, File name label, Change Password button, and show the Edit Profile button and Back button
             Btn_UpdatePic.Visible = false;
             Btn_Submit.Visible = false;
             Btn_EditProfile.Visible = true;
             L_Filename.Visible = false;
             Btn_Back.Visible = true;
             Btn_ChangePassword.Visible = false;
+
+            // Initialize variables
+            string name = TB_Name.Text;
+            string title = TB_Title.Text;
+            string contact = TB_Phone.Text + "," + TB_Email.Text;
+            string image;
+
+            // Update the Account information in the database
+            if (L_Filename.Text != "File Name")
+            {
+                image = L_Filename.Text;
+            }
+            else
+            {
+                image = Login_Form.account.Picture;
+            }
+
+            // Get AccountID based on the username
+            int accountID = Login_Form.account.AccountID;
+
+            // Update the account information in the database
+            sqliteDataAccess.UpdateAccount(accountID, name, Login_Form.account.Password, title, contact, image);
         }
 
         private void TB_NameResize()

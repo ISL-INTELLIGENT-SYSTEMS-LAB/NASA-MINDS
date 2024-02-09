@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NASA_MINDS_Library;
 
 namespace Inventory_Tracking_and_Managment
 {
@@ -64,11 +65,20 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_Logout_Click(object sender, EventArgs e)
         {
+            // Purge the account information when the Logout button is clicked
+            PurgeAccount();
+
             // Open the Login_Form and close the Menu_Form when the Logout button is clicked
             Hide();
             var Login_Form = new Login_Form();
             Login_Form.Closed += (s, args) => Close();
             Login_Form.Show();
+        }
+
+        public void PurgeAccount()
+        {
+            // Purge the account information and set the account object to null
+            Login_Form.account = null;
         }
     }
 }

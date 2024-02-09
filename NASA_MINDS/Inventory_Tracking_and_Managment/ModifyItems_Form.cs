@@ -196,6 +196,13 @@ namespace Inventory_Tracking_and_Managment
 
             // Update the item in the database
             sqliteDataAccess.UpdateItem(id, name, description, serial, conditionint, ro, image, rfid);
+            
+            // Update the item in the list
+            items[CB_ItemSearch.SelectedIndex] = new Item(id, name, description, serial, conditionint, ro, image, rfid);
+
+            // Refresh the combo box and display a message box to confirm the update
+            CB_ItemSearch_SelectedIndexChanged(this, new EventArgs());
+            MessageBox.Show("Item has been Updated in database", "Update Successful!");
         }
 
         private void Btn_GenTagID_Click(object sender, EventArgs e)

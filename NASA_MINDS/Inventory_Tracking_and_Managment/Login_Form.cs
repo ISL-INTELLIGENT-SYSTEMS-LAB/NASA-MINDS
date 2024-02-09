@@ -21,6 +21,7 @@ namespace Inventory_Tracking_and_Managment
             InitializeComponent();
         }
 
+
         private void Btn_Login_Click(object sender, EventArgs e)
         {
             // Retrieve the account information from the database
@@ -33,23 +34,58 @@ namespace Inventory_Tracking_and_Managment
             }
             else
             {
-                // Open the Menu_Form and close the Login_Form when the Login button is clicked
-                Hide();
-                var Menu_Form = new Menu_Form();
-                Menu_Form.Closed += (s, args) => Close();
-                Menu_Form.Show();
+                string enteredpassword = TB_Password.Text;
+                
+                if (enteredpassword != account.Password)
+                {
+                    TB_Password.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    // Open the Menu_Form and close the Login_Form when the Login button is clicked
+                    Hide();
+                    var Menu_Form = new Menu_Form();
+                    Menu_Form.Closed += (s, args) => Close();
+                    Menu_Form.Show();
+                }
             }
         }
 
         private void Btn_Forgot_Click(object sender, EventArgs e)
         {
-            account = sqliteDataAccess.RetriveAccount("taylorjb96");
-            
-            // Open the Menu_Form and close the Login_Form when the Login button is clicked
+            // Show message box with the password of the account that is being retrieved from the database
+            string username = TB_Username.Text;
+            account = sqliteDataAccess.RetriveAccount(username);
+            MessageBox.Show("Your password is: " + account.Password);
+
+            // account = sqliteDataAccess.RetriveAccount("taylorjb96");
+
+            /* Open the Menu_Form and close the Login_Form when the Login button is clicked
             Hide();
             var Menu_Form = new Menu_Form();
             Menu_Form.Closed += (s, args) => Close();
             Menu_Form.Show();
+            */
+        }
+
+        private void TB_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Btn_Login_Click(this, new EventArgs());
+            }
+        }
+
+        private void Btn_ShowPass_Click(object sender, EventArgs e)
+        {
+            if (TB_Password.PasswordChar == '*')
+            {
+                TB_Password.PasswordChar = '\0';
+            }
+            else
+            {
+                TB_Password.PasswordChar = '*';
+            }
         }
     }
 }

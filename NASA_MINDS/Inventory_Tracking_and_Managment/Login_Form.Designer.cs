@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Forgot = new System.Windows.Forms.Button();
             this.Btn_Login = new System.Windows.Forms.Button();
+            this.Btn_ShowPass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +98,7 @@
             this.TB_Password.PasswordChar = '*';
             this.TB_Password.Size = new System.Drawing.Size(400, 49);
             this.TB_Password.TabIndex = 3;
+            this.TB_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Password_KeyDown);
             // 
             // panel1
             // 
@@ -104,6 +106,7 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Btn_ShowPass);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -170,6 +173,17 @@
             this.Btn_Login.UseVisualStyleBackColor = true;
             this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
+            // Btn_ShowPass
+            // 
+            this.Btn_ShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ShowPass.Location = new System.Drawing.Point(792, 336);
+            this.Btn_ShowPass.Name = "Btn_ShowPass";
+            this.Btn_ShowPass.Size = new System.Drawing.Size(40, 48);
+            this.Btn_ShowPass.TabIndex = 10;
+            this.Btn_ShowPass.Text = "👁️";
+            this.Btn_ShowPass.UseVisualStyleBackColor = true;
+            this.Btn_ShowPass.Click += new System.EventHandler(this.Btn_ShowPass_Click);
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +222,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Btn_ShowPass;
     }
 }
 
