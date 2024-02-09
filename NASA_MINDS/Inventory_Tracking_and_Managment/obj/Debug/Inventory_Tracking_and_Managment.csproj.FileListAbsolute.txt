@@ -217,3 +217,63 @@ C:\Users\luis0\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inv
 C:\Users\luis0\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CopyComplete
 C:\Users\luis0\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.exe
 C:\Users\luis0\Desktop\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe.config
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Dapper.dll
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\NASA_MINDS_Library.dll
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Data.SQLite.dll
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\NASA_MINDS_Library.pdb
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Dapper.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Buffers.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Data.SQLite.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Memory.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.AssemblyReference.cache
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Account_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ChangePassword_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.FindItems_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Login_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Menu_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ModifyItems_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Properties.Resources.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ShoppingListImport_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ShoppingList_Form.resources
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.GenerateResource.cache
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CoreCompileInputs.cache
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CopyComplete
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\Taylor Brown\Desktop\NASA-MINDS-main (1)\NASA-MINDS-main\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe.config
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Inventory_Tracking_and_Managment.pdb
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Dapper.dll
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\NASA_MINDS_Library.dll
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Data.SQLite.dll
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\NASA_MINDS_Library.pdb
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Dapper.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Buffers.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Data.SQLite.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Memory.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.AssemblyReference.cache
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Account_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ChangePassword_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.FindItems_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Login_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Menu_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ModifyItems_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.Properties.Resources.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ShoppingListImport_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.ShoppingList_Form.resources
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.GenerateResource.cache
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CoreCompileInputs.cache
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.csproj.CopyComplete
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.exe
+C:\Users\luis0\Downloads\NASA_MINDS (1)\NASA_MINDS\Inventory_Tracking_and_Managment\obj\Debug\Inventory_Tracking_and_Managment.pdb
