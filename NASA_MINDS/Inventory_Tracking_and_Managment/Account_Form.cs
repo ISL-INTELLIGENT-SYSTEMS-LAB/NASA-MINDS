@@ -133,7 +133,7 @@ namespace Inventory_Tracking_and_Managment
             int accountID = Login_Form.account.AccountID;
 
             // Update the account information in the database
-            sqliteDataAccess.UpdateAccount(accountID, name, Login_Form.account.Password, title, contact, image);
+            sqliteDataAccess.UpdateAccount(accountID, name, title, contact, image);
         }
 
         private void TB_NameResize()
