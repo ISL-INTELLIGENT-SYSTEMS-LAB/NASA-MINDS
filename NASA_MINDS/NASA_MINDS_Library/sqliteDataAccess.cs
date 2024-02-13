@@ -152,16 +152,16 @@ namespace NASA_MINDS_Library
             }
         }
 
-        public static void UpdateAccount(int accountID, string username, string password, string title, string contact, string picture)
+        public static void UpdateAccount(int accountID, string username, string title, string contact, string picture)
         {
             // Open a connection to the database
             using (var con = new SQLiteConnection(LoadConnectionString())) { con.Open();
             
                 // Create a command to update the account in the database
-                var cmd = new SQLiteCommand("UPDATE Accounts SET username=@username, Password=@password, title=@title, contact=@contact, picture=@picture WHERE accountID=@accountID", con);
+                var cmd = new SQLiteCommand("UPDATE Accounts SET username=@username, title=@title, contact=@contact, picture=@picture WHERE accountID=@accountID", con);
                 cmd.Parameters.AddWithValue("@accountID", accountID);
                 cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
+                //cmd.Parameters.AddWithValue("@password", password);
                 cmd.Parameters.AddWithValue("@title", title);
                 cmd.Parameters.AddWithValue("@contact", contact);
                 cmd.Parameters.AddWithValue("@picture", picture);
@@ -171,6 +171,23 @@ namespace NASA_MINDS_Library
                 con.Close();
                 return;
              }
+        }
+
+        public static void UpdatePassword(string username, string password)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString())) { con.Open();
+            
+                           // Create a command to update the account in the database
+                           var cmd = new SQLiteCommand("UPDATE Accounts SET Password=@password WHERE username=@username", con);
+                           cmd.Parameters.AddWithValue("@username", username);
+                           cmd.Parameters.AddWithValue("@password", password);
+                         
+                           // Execute the command and close the connection to the database
+                           cmd.ExecuteNonQuery();
+                           con.Close();
+                           return;
+            }           
         }
     }
 }
