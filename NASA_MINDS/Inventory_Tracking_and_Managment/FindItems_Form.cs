@@ -43,22 +43,22 @@ namespace Inventory_Tracking_and_Managment
             L_RO.Text = items[CB_ItemSearch.SelectedIndex].RNNum.ToString();
             L_TagId.Text = items[CB_ItemSearch.SelectedIndex].RFID.ToString();
 
-            // Display the condition of the item based on the number in the database
-            if (items[CB_ItemSearch.SelectedIndex].Condition == 0)
+            // Use a switch statement to display the condition of the item in the label
+            int condition = items[CB_ItemSearch.SelectedIndex].Condition;
+            switch (condition)
             {
-                L_Condition.Text = "New";
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 1)
-            {
-                L_Condition.Text = "Good";
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 2)
-            {
-                L_Condition.Text = "Needs repair";
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 3)
-            {
-                L_Condition.Text = "Broken";
+                case 0:
+                    L_Condition.Text = "New";
+                    break;
+                case 1:
+                    L_Condition.Text = "Good";
+                    break;
+                case 2:
+                    L_Condition.Text = "Needs repair";
+                    break;
+                case 3:
+                    L_Condition.Text = "Broken";
+                    break;
             }
             
             // Display the image of the item in the picture box if there is one in the database or display the default image

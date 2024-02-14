@@ -53,10 +53,24 @@ namespace Inventory_Tracking_and_Managment
                     {
                         // Update the password in the database
                         sqliteDataAccess.UpdatePassword(username, Tb_NewPassword.Text);
-                        Hide();
                     }
                 }
+
+                // CHeck if user is able to submit or not
+                if (Tb_CurrentPassword.Text == "" || Tb_NewPassword.Text == "" || Tb_Reenter.Text == "")
+                {
+                    // Display a message box that remins user to fill in all fields
+                    MessageBox.Show("Please fill in all fields", "Error");
+                }
+                else
+                {
+                    // Display a message box to the user that the password has been updated
+                    MessageBox.Show("Password has been Updated in database", "Update Successful!");
+                    Hide();
+                }
             }
+
+            
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)

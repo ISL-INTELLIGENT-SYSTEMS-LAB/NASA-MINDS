@@ -74,22 +74,25 @@ namespace Inventory_Tracking_and_Managment
             TB_Ro.Text = items[CB_ItemSearch.SelectedIndex].RNNum.ToString();
             L_TagId.Text = items[CB_ItemSearch.SelectedIndex].RFID.ToString();
 
-            // Assigns combobox value based on item condition integer
-            if (items[CB_ItemSearch.SelectedIndex].Condition == 0)
+            // Switch case statement to assign combobox value based on item condition integer
+            int condition = items[CB_ItemSearch.SelectedIndex].Condition;
+            switch (condition)
             {
-                CB_Condition.SelectedIndex = 0;
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 1)
-            {
-                CB_Condition.SelectedIndex = 1;
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 2)
-            {
-                CB_Condition.SelectedIndex = 2;
-            }
-            else if (items[CB_ItemSearch.SelectedIndex].Condition == 3)
-            {
-                CB_Condition.SelectedIndex = 3;
+                case 0:
+                    CB_Condition.SelectedIndex = 0;
+                    break;
+                case 1:
+                    CB_Condition.SelectedIndex = 1;
+                    break;
+                case 2:
+                    CB_Condition.SelectedIndex = 2;
+                    break;
+                case 3:
+                    CB_Condition.SelectedIndex = 3;
+                    break;
+                default:
+                    CB_Condition.SelectedIndex = 4;
+                    break;
             }
 
             // Display image in picture box

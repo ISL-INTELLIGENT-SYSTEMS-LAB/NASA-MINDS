@@ -134,6 +134,9 @@ namespace Inventory_Tracking_and_Managment
 
             // Update the account information in the database
             sqliteDataAccess.UpdateAccount(accountID, name, title, contact, image);
+
+            // Display a message box to the user that the account infromation has been updated
+            MessageBox.Show("Account Information has been Updated in database", "Update Successful!");
         }
 
         private void TB_NameResize()
