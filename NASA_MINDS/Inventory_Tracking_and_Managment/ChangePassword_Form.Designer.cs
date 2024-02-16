@@ -95,6 +95,7 @@
             this.Tb_CurrentPassword.PasswordChar = '*';
             this.Tb_CurrentPassword.Size = new System.Drawing.Size(369, 54);
             this.Tb_CurrentPassword.TabIndex = 4;
+            this.Tb_CurrentPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_CurrentPassword_KeyDown);
             // 
             // Tb_NewPassword
             // 
@@ -105,6 +106,7 @@
             this.Tb_NewPassword.PasswordChar = '*';
             this.Tb_NewPassword.Size = new System.Drawing.Size(369, 54);
             this.Tb_NewPassword.TabIndex = 5;
+            this.Tb_NewPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_NewPassword_KeyDown);
             // 
             // Tb_Reenter
             // 
@@ -115,6 +117,7 @@
             this.Tb_Reenter.PasswordChar = '*';
             this.Tb_Reenter.Size = new System.Drawing.Size(369, 54);
             this.Tb_Reenter.TabIndex = 6;
+            this.Tb_Reenter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_Reenter_KeyDown);
             // 
             // Btn_Cancel
             // 

@@ -49,7 +49,7 @@ namespace Inventory_Tracking_and_Managment
                         Tb_NewPassword.BackColor = Color.MistyRose;
                         Tb_Reenter.BackColor = Color.MistyRose;
                     }
-                    else
+                    else if (Tb_NewPassword.Text == Tb_Reenter.Text)
                     {
                         // Update the password in the database
                         sqliteDataAccess.UpdatePassword(username, Tb_NewPassword.Text);
@@ -62,15 +62,41 @@ namespace Inventory_Tracking_and_Managment
                     // Display a message box that remins user to fill in all fields
                     MessageBox.Show("Please fill in all fields", "Error");
                 }
+                else if (Tb_CurrentPassword.BackColor == Color.MistyRose)
+                {
+                    // Display a message box that remins user to fill in all fields
+                    MessageBox.Show("Current Password is incorrect", "Error");
+                }
+                else if (Tb_NewPassword.BackColor == Color.MistyRose || Tb_Reenter.BackColor == Color.MistyRose)
+                {
+                    // Display a message box that remins user to fill in all fields
+                    MessageBox.Show("New Password and Reentered Password do not match", "Error");
+                }
                 else
                 {
                     // Display a message box to the user that the password has been updated
                     MessageBox.Show("Password has been Updated in database", "Update Successful!");
                     Hide();
                 }
-            }
+            }   
+        }
 
-            
+        // Reset the background color of textboxes when a key is pressed
+        private void Tb_CurrentPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            Tb_CurrentPassword.BackColor = Color.White;
+        }
+
+        // Reset the background color of the textboxes when the user starts typing in them
+        private void Tb_NewPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            Tb_NewPassword.BackColor = Color.White;
+        }
+
+        // Reset the background color of the textboxes when the user starts typing in them
+        private void Tb_Reenter_KeyDown(object sender, KeyEventArgs e)
+        {
+            Tb_Reenter.BackColor = Color.White;
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)

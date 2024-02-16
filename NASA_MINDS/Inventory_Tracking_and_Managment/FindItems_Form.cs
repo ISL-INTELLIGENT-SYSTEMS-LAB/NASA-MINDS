@@ -53,11 +53,14 @@ namespace Inventory_Tracking_and_Managment
                 case 1:
                     L_Condition.Text = "Good";
                     break;
-                case 2:
+                case 2:.
                     L_Condition.Text = "Needs repair";
                     break;
                 case 3:
                     L_Condition.Text = "Broken";
+                    break;
+                default:
+                    L_Condition.Text = "Unknown";
                     break;
             }
             

@@ -42,25 +42,23 @@ namespace Inventory_Tracking_and_Managment
         {
             // Check the condition of the item and convert it to a string
             string condition;
-            if (item.Condition == 0)
+            switch (item.Condition)
             {
-                condition = "New";
-            }
-            else if (item.Condition == 1)
-            {
-                condition = "Good";
-            }
-            else if (item.Condition == 2)
-            {
-                condition = "Needs repair";
-            }
-            else if (item.Condition == 3)
-            {
-                condition = "Broken";
-            }
-            else
-            {
-                condition = "Unknown";
+                case 0:
+                    condition = "New";
+                    break;
+                case 1:
+                    condition = "Good";
+                    break;
+                case 2:
+                    condition = "Needs repair";
+                    break;
+                case 3:
+                    condition = "Broken";
+                    break;
+                default:
+                    condition = "Unknown";
+                    break;
             }
 
             // Add the item to the datagridview
