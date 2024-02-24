@@ -40,43 +40,76 @@ namespace Inventory_Tracking_and_Managment
                 if (enteredpassword != account.Password)
                 {
                     Tb_CurrentPassword.BackColor = Color.MistyRose;
-                }
-                else
-                {
-                    // Ensure that the new password and reentered password match
-                    if (Tb_NewPassword.Text != Tb_Reenter.Text)
-                    {
-                        Tb_NewPassword.BackColor = Color.MistyRose;
-                        Tb_Reenter.BackColor = Color.MistyRose;
-                    }
-                    else if (Tb_NewPassword.Text == Tb_Reenter.Text)
-                    {
-                        // Update the password in the database
-                        sqliteDataAccess.UpdatePassword(username, Tb_NewPassword.Text);
-                    }
-                }
-
-                // CHeck if user is able to submit or not
-                if (Tb_CurrentPassword.Text == "" || Tb_NewPassword.Text == "" || Tb_Reenter.Text == "")
-                {
-                    // Display a message box that remins user to fill in all fields
-                    MessageBox.Show("Please fill in all fields", "Error");
-                }
-                else if (Tb_CurrentPassword.BackColor == Color.MistyRose)
-                {
-                    // Display a message box that remins user to fill in all fields
                     MessageBox.Show("Current Password is incorrect", "Error");
                 }
-                else if (Tb_NewPassword.BackColor == Color.MistyRose || Tb_Reenter.BackColor == Color.MistyRose)
-                {
-                    // Display a message box that remins user to fill in all fields
-                    MessageBox.Show("New Password and Reentered Password do not match", "Error");
-                }
                 else
                 {
-                    // Display a message box to the user that the password has been updated
-                    MessageBox.Show("Password has been Updated in database", "Update Successful!");
-                    Hide();
+                    // Check if the new password fits the requirements
+                    if (Tb_NewPassword.Text.Length < 8)
+                    {
+                        Tb_NewPassword.BackColor = Color.MistyRose;
+
+                        // Display a message box that reminds user of password requirementss
+                        MessageBox.Show("Password must contain at least 8 characters, 1 number, 1 uppercase letter, 1 lowercase letter, and 1 special character", "Error");
+                    }
+                    else if (Tb_NewPassword.Text.Length >= 8)
+                    {
+                        bool hasNumber = false;
+                        bool hasUpper = false;
+                        bool hasLower = false;
+                        bool hasSpecial = false;
+
+                        foreach (char c in Tb_NewPassword.Text)
+                        {
+                            if (char.IsNumber(c))
+                            {
+                                hasNumber = true;
+                            }
+                            else if (char.IsUpper(c))
+                            {
+                                hasUpper = true;
+                            }
+                            else if (char.IsLower(c))
+                            {
+                                hasLower = true;
+                            }
+                            else if (char.IsSymbol(c) || char.IsPunctuation(c))
+                            {
+                                hasSpecial = true;
+                            }
+                        }
+
+                        // Give Error message if password does not meet requirements
+
+                        if (hasNumber == false || hasUpper == false || hasLower == false || hasSpecial == false)
+                        {
+                            Tb_NewPassword.BackColor = Color.MistyRose;
+
+                            // Display a message box that reminds user of password requirementss
+                            MessageBox.Show("Password must contain at least 8 characters, 1 number, 1 uppercase letter, 1 lowercase letter, and 1 special character", "Error");
+                        }
+
+                        else if (hasNumber == true && hasUpper == true && hasLower == true && hasSpecial == true)
+                        {
+                            // Ensure that the new password and reentered password match
+                            if (Tb_NewPassword.Text != Tb_Reenter.Text)
+                            {
+                                Tb_NewPassword.BackColor = Color.MistyRose;
+                                Tb_Reenter.BackColor = Color.MistyRose;
+
+                                // Display a message box that reminds user to fill in all fields
+                                MessageBox.Show("New Password and Reentered Password do not match", "Error");
+                            }
+                            else
+                            {
+                                // Display a message box to the user that the password has been updated
+                                MessageBox.Show("Password has been Updated in database", "Update Successful!");
+                                // Update the password in the database
+                                sqliteDataAccess.UpdatePassword(username, Tb_NewPassword.Text);
+                                Hide();
+                            }
+                        }
+                    }
                 }
             }   
         }
