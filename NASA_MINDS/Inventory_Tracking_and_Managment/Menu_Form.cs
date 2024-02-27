@@ -48,10 +48,10 @@ namespace Inventory_Tracking_and_Managment
         private void Btn_IngestItems_Click(object sender, EventArgs e)
         {
             // Open the IngestItems_Form and close the Menu_Form when the Ingest Items button is clicked
-            // Hide();
-            // var IngestItems_Form = new IngestItems_Form();
-            // IngestItems_Form.Closed += (s, args) => Close();
-            // IngestItems_Form.Show();
+            Hide();
+            var IngestItems_Form = new IngestItems_Form();
+            IngestItems_Form.Closed += (s, args) => Close();
+            IngestItems_Form.Show();
         }
 
         private void Btn_Account_Click(object sender, EventArgs e)
