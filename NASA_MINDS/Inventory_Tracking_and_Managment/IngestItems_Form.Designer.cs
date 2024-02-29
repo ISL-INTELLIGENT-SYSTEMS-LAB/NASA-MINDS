@@ -46,11 +46,14 @@
             this.CBIF_Condition = new System.Windows.Forms.ComboBox();
             this.Btn_ClearAllFields = new System.Windows.Forms.Button();
             this.LIF_Filename = new System.Windows.Forms.Label();
+            this.LIF_Location = new System.Windows.Forms.Label();
+            this.TBIF_Location = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PBIF_Pic)).BeginInit();
             this.SuspendLayout();
             // 
             // PBIF_Pic
             // 
+            this.PBIF_Pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PBIF_Pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PBIF_Pic.Location = new System.Drawing.Point(149, 156);
             this.PBIF_Pic.Name = "PBIF_Pic";
@@ -62,7 +65,7 @@
             // 
             this.TBIF_Name.Location = new System.Drawing.Point(978, 156);
             this.TBIF_Name.Name = "TBIF_Name";
-            this.TBIF_Name.Size = new System.Drawing.Size(277, 20);
+            this.TBIF_Name.Size = new System.Drawing.Size(277, 22);
             this.TBIF_Name.TabIndex = 1;
             // 
             // TBIF_Description
@@ -75,16 +78,16 @@
             // 
             // TBIF_Serial
             // 
-            this.TBIF_Serial.Location = new System.Drawing.Point(978, 373);
+            this.TBIF_Serial.Location = new System.Drawing.Point(978, 445);
             this.TBIF_Serial.Name = "TBIF_Serial";
-            this.TBIF_Serial.Size = new System.Drawing.Size(277, 20);
+            this.TBIF_Serial.Size = new System.Drawing.Size(277, 22);
             this.TBIF_Serial.TabIndex = 4;
             // 
             // TBIF_Ro
             // 
-            this.TBIF_Ro.Location = new System.Drawing.Point(978, 449);
+            this.TBIF_Ro.Location = new System.Drawing.Point(978, 511);
             this.TBIF_Ro.Name = "TBIF_Ro";
-            this.TBIF_Ro.Size = new System.Drawing.Size(277, 20);
+            this.TBIF_Ro.Size = new System.Drawing.Size(277, 22);
             this.TBIF_Ro.TabIndex = 5;
             // 
             // BtnIF_Upload
@@ -111,9 +114,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(879, 156);
+            this.label2.Location = new System.Drawing.Point(860, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Name:";
             // 
@@ -121,9 +124,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(879, 222);
+            this.label4.Location = new System.Drawing.Point(860, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.Size = new System.Drawing.Size(115, 25);
             this.label4.TabIndex = 12;
             this.label4.Text = "Description:";
             // 
@@ -131,9 +134,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(879, 315);
+            this.label8.Location = new System.Drawing.Point(860, 314);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.Size = new System.Drawing.Size(101, 25);
             this.label8.TabIndex = 13;
             this.label8.Text = "Condition:";
             // 
@@ -141,9 +144,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(879, 371);
+            this.label10.Location = new System.Drawing.Point(860, 445);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 20);
+            this.label10.Size = new System.Drawing.Size(84, 25);
             this.label10.TabIndex = 14;
             this.label10.Text = "Serial #:";
             // 
@@ -151,9 +154,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(879, 449);
+            this.label11.Location = new System.Drawing.Point(860, 507);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 20);
+            this.label11.Size = new System.Drawing.Size(58, 25);
             this.label11.TabIndex = 15;
             this.label11.Text = "RO#:";
             // 
@@ -161,21 +164,20 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(879, 534);
+            this.label12.Location = new System.Drawing.Point(860, 585);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 20);
+            this.label12.Size = new System.Drawing.Size(77, 25);
             this.label12.TabIndex = 16;
             this.label12.Text = "Tag ID:";
             // 
             // Btn_GenerateTagID
             // 
-            this.Btn_GenerateTagID.Location = new System.Drawing.Point(978, 534);
+            this.Btn_GenerateTagID.Location = new System.Drawing.Point(979, 564);
             this.Btn_GenerateTagID.Name = "Btn_GenerateTagID";
-            this.Btn_GenerateTagID.Size = new System.Drawing.Size(277, 53);
+            this.Btn_GenerateTagID.Size = new System.Drawing.Size(276, 46);
             this.Btn_GenerateTagID.TabIndex = 17;
             this.Btn_GenerateTagID.Text = "Generate ID #";
             this.Btn_GenerateTagID.UseVisualStyleBackColor = true;
-            this.Btn_GenerateTagID.Click += new System.EventHandler(this.Btn_GenerateTagID_Click);
             // 
             // BtnIF_Back
             // 
@@ -197,31 +199,51 @@
             "Broken"});
             this.CBIF_Condition.Location = new System.Drawing.Point(978, 315);
             this.CBIF_Condition.Name = "CBIF_Condition";
-            this.CBIF_Condition.Size = new System.Drawing.Size(277, 21);
+            this.CBIF_Condition.Size = new System.Drawing.Size(277, 24);
             this.CBIF_Condition.TabIndex = 19;
-            this.CBIF_Condition.SelectedIndexChanged += new System.EventHandler(this.CBIF_Condition_SelectedIndexChanged);
             // 
             // Btn_ClearAllFields
             // 
-            this.Btn_ClearAllFields.Location = new System.Drawing.Point(1064, 616);
+            this.Btn_ClearAllFields.Location = new System.Drawing.Point(1068, 627);
             this.Btn_ClearAllFields.Name = "Btn_ClearAllFields";
             this.Btn_ClearAllFields.Size = new System.Drawing.Size(102, 31);
             this.Btn_ClearAllFields.TabIndex = 20;
             this.Btn_ClearAllFields.Text = "Clear All Fields";
             this.Btn_ClearAllFields.UseVisualStyleBackColor = true;
+            this.Btn_ClearAllFields.Click += new System.EventHandler(this.Btn_ClearAllFields_Click);
             // 
             // LIF_Filename
             // 
             this.LIF_Filename.AutoSize = true;
             this.LIF_Filename.Location = new System.Drawing.Point(447, 631);
             this.LIF_Filename.Name = "LIF_Filename";
-            this.LIF_Filename.Size = new System.Drawing.Size(49, 13);
+            this.LIF_Filename.Size = new System.Drawing.Size(63, 16);
             this.LIF_Filename.TabIndex = 21;
             this.LIF_Filename.Text = "Filename";
+            // 
+            // LIF_Location
+            // 
+            this.LIF_Location.AutoSize = true;
+            this.LIF_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.LIF_Location.Location = new System.Drawing.Point(860, 383);
+            this.LIF_Location.Name = "LIF_Location";
+            this.LIF_Location.Size = new System.Drawing.Size(92, 25);
+            this.LIF_Location.TabIndex = 22;
+            this.LIF_Location.Text = "Location:";
+            // 
+            // TBIF_Location
+            // 
+            this.TBIF_Location.Location = new System.Drawing.Point(978, 387);
+            this.TBIF_Location.Name = "TBIF_Location";
+            this.TBIF_Location.Size = new System.Drawing.Size(277, 22);
+            this.TBIF_Location.TabIndex = 23;
             // 
             // IngestItems_Form
             // 
             this.ClientSize = new System.Drawing.Size(1534, 826);
+            this.ControlBox = false;
+            this.Controls.Add(this.TBIF_Location);
+            this.Controls.Add(this.LIF_Location);
             this.Controls.Add(this.LIF_Filename);
             this.Controls.Add(this.Btn_ClearAllFields);
             this.Controls.Add(this.CBIF_Condition);
@@ -241,6 +263,8 @@
             this.Controls.Add(this.TBIF_Name);
             this.Controls.Add(this.PBIF_Pic);
             this.Name = "IngestItems_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.PBIF_Pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,5 +311,7 @@
         private System.Windows.Forms.ComboBox CBIF_Condition;
         private System.Windows.Forms.Button Btn_ClearAllFields;
         private System.Windows.Forms.Label LIF_Filename;
+        private System.Windows.Forms.Label LIF_Location;
+        private System.Windows.Forms.TextBox TBIF_Location;
     }
 }

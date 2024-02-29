@@ -61,30 +61,54 @@ namespace Inventory_Tracking_and_Managment
         // Submit the item to the database
         private void BtnIF_Submit_Click(object sender, EventArgs e)
         {
-            return;
-        }
-        // User selects an item from the dropdown
-        private void CBIF_Condition_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int condition = items[CB_ItemSearch.SelectedIndex].Condition;
-            switch (condition)
-            {
-                case 0:
-                    CB_Condition.SelectedIndex = 0;
+            // Initiate variables
+            string name = TBIF_Name.Text;
+            string serial = TBIF_Serial.Text;
+            //string location = TBIF_Location.Text;
+            string description = TBIF_Description.Text;
+            
+            // Set item condition
+            int conditionint;
+            string condition = CBIF_Condition.Text;
+            switch (condition){
+                case "New":
+                    conditionint = 0;
                     break;
-                case 1:
-                    CB_Condition.SelectedIndex = 1;
+                case "Good":
+                    conditionint = 1;
                     break;
-                case 2:
-                    CB_Condition.SelectedIndex = 2;
+                case "Needs Repair":
+                    conditionint = 2;
                     break;
-                case 3:
-                    CB_Condition.SelectedIndex = 3;
+                case "Broken":
+                    conditionint = 3;
                     break;
                 default:
-                    CB_Condition.SelectedIndex = 4;
+                    conditionint = 4;
                     break;
+
             }
+
+            string tagID = Btn_GenerateTagID.Text.ToString();
+
+            string filename = LIF_Filename.Text;
+            string register = TBIF_Ro.Text.ToString();
+            //string image = PBIF_Pic.BackgroundImage;
+
+            // Add the item to the database using InsertItem method
+            sqliteDataAccess.InsertItem(name, description, serial, conditionint, register, filename, tagID);
+            MessageBox.Show("Item has been added to the database");
+
+            // Clear all fields
+            CBIF_Condition.Text = "";
+            TBIF_Description.Text = "";
+            TBIF_Location.Text = "";
+            TBIF_Name.Text = "";
+            TBIF_Serial.Text = "";
+            Btn_GenerateTagID.Text = "Generate ID #";
+            PBIF_Pic.BackgroundImage = null;
+            LIF_Filename.Text = "";
+            TBIF_Ro.Text = "";
         }
         
         // Generate a random tag ID
@@ -94,6 +118,18 @@ namespace Inventory_Tracking_and_Managment
             int randomnumber = random.Next(100, 1000);
             Btn_GenerateTagID.Text = Convert.ToString(randomnumber);    // Update button text to show the random number
         }
+
+        private void Btn_ClearAllFields_Click(object sender, EventArgs e)
+        {
+            CBIF_Condition.SelectedIndex = 0;
+            TBIF_Description.Text = "";
+            TBIF_Location.Text = "";
+            TBIF_Name.Text = "";
+            TBIF_Serial.Text = "";
+            Btn_GenTagID.Text = "Generate ID #";
+            PBIF_Pic.BackgroundImage = null;
+            LIF_Filename.Text = "";
+            TBIF_Ro.Text = "";
+        }
     }
 }
-    
