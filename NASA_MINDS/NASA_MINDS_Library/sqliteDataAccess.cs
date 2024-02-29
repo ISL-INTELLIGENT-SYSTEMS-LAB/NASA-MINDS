@@ -189,5 +189,30 @@ namespace NASA_MINDS_Library
                            return;
             }           
         }
+
+        public static void InsertItem(string itemName, string itemDescription, string serial, int conditionalStatus, string RN, string imageLocation, string RFID_Tag)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+            //Create a command to insert the item into the database
+            var cmd = new SQLiteCommand("INSERT INTO Items (itemName, itemDescription, serial, conditionalStatus, RN, imageLocation, RFID_Tag) VALUES (@itemName, @itemDescription, @serial, @conditionalStatus, @RN, @imageLocation, @RFID_Tag)", con);
+            cmd.Parameters.AddWithValue("@itemName", itemName);
+            cmd.Parameters.AddWithValue("@itemDescription", itemDescription);
+            cmd.Parameters.AddWithValue("@serial", serial);
+            cmd.Parameters.AddWithValue("@conditionalStatus", conditionalStatus);
+            cmd.Parameters.AddWithValue("@RN", RN);
+            cmd.Parameters.AddWithValue("@imageLocation", imageLocation);
+            cmd.Parameters.AddWithValue("@RFID_Tag", RFID_Tag);
+            
+            // Execute the command and close the connection to the database
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return;
+
+            }                                                                                                                                                                                                      
+        }
     }
 }
