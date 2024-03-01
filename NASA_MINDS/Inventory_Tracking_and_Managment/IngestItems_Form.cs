@@ -110,26 +110,39 @@ namespace Inventory_Tracking_and_Managment
             LIF_Filename.Text = "";
             TBIF_Ro.Text = "";
         }
-        
-        // Generate a random tag ID
-        private void Btn_GenerateTagID_Click(object sender, EventArgs e)
-        {
-            Random random = new Random();
-            int randomnumber = random.Next(100, 1000);
-            Btn_GenerateTagID.Text = Convert.ToString(randomnumber);    // Update button text to show the random number
-        }
-
         private void Btn_ClearAllFields_Click(object sender, EventArgs e)
         {
-            CBIF_Condition.SelectedIndex = 0;
+            CBIF_Condition.Text = "";
             TBIF_Description.Text = "";
             TBIF_Location.Text = "";
             TBIF_Name.Text = "";
             TBIF_Serial.Text = "";
-            Btn_GenTagID.Text = "Generate ID #";
+            Btn_GenerateTagID.Text = "Generate ID #";
             PBIF_Pic.BackgroundImage = null;
             LIF_Filename.Text = "";
             TBIF_Ro.Text = "";
+        }
+
+        private void Btn_GenerateTagID_Click(object sender, EventArgs e)
+        {
+            // Generate a random tag ID and display it in the button
+            Random rnd = new Random();
+            int tagID = rnd.Next(100, 1000);
+            // Check if the tag ID already exists in the database and generate a new one if it does
+            while (sqliteDataAccess.CheckTagID(tagID))
+            {
+                bool exists = sqliteDataAccess.CheckTagID(tagID);
+                if (exists)
+                {
+                    tagID = rnd.Next(100, 1000);
+                }
+                else
+                {
+                    // Add 1 to the tag ID to ensure it is unique
+                    tagID += 1;
+                }
+            }
+            Btn_GenerateTagID.Text = tagID.ToString();
         }
     }
 }
