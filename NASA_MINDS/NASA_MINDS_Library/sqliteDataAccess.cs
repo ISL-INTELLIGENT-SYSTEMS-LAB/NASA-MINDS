@@ -214,5 +214,33 @@ namespace NASA_MINDS_Library
 
             }                                                                                                                                                                                                      
         }
+
+        // Check existing tag ID
+        public static bool CheckTagID(int tagID)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString())) { con.Open();
+            
+                //Create a command to select the tag ID from the database
+                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE RFID_Tag=@tagID", con);
+                cmd.Parameters.AddWithValue("@tagID", tagID);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+            
+                // If the tag ID is found, return true
+                if (rdr.HasRows){
+                    rdr.Close();
+                    con.Close();
+                    return true;
+                }
+                // If the tag ID is not found, return false
+                else{
+                    rdr.Close();
+                    con.Close();
+                    return false;
+                }
+                                      
+            }
+
+        }
     }
 }
