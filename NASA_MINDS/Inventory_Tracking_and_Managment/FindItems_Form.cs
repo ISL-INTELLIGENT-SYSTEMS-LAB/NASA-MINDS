@@ -13,14 +13,14 @@ namespace Inventory_Tracking_and_Managment
 {
     public partial class FindItems_Form : Form
     {
-        List<Item> items = new List<Item>();
+        List<Item> items = sqliteDataAccess.GetAllItems();
+        List<Location> locations = sqliteDataAccess.GetAllLocations();
 
         public FindItems_Form()
         {
             InitializeComponent();
-
-            // Populate the datagridview with items
-            items = sqliteDataAccess.GetAllItems();
+            
+            // Pull items from database and display in combo box
             CB_ItemSearch.DataSource = items;
             CB_ItemSearch.DisplayMember = "ItemName";
         }
@@ -42,6 +42,13 @@ namespace Inventory_Tracking_and_Managment
             L_SerialNum.Text = items[CB_ItemSearch.SelectedIndex].SerialNum;
             L_RO.Text = items[CB_ItemSearch.SelectedIndex].RNNum.ToString();
             L_TagId.Text = items[CB_ItemSearch.SelectedIndex].RFID.ToString();
+
+            // Pull items location from database and display in RTB_Location
+            ItemLocation itemLocation = sqliteDataAccess.GetItemLocation(items[CB_ItemSearch.SelectedIndex].ItemID);
+            string location = locations.Find(x => x.LocationID == itemLocation.Location).LocationName;
+
+            // Display the location of the item in the rich text box by sercing for the itemid in the locations list
+            RTB_Location.Text = location;
 
             // Use a switch statement to display the condition of the item in the label
             int condition = items[CB_ItemSearch.SelectedIndex].Condition;
