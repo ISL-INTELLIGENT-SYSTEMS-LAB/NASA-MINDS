@@ -31,4 +31,27 @@ namespace NASA_MINDS_Library
         public string Image_loc { get; set; }
         public int RFID { get; set; }
     }
+
+    public class ItemLocation
+    {
+        // Constructor for the item location
+        public ItemLocation(int recordid, int itemID, int locationid, int accountid, string date)
+        {
+            RecordID = recordid;
+            ItemID = itemID;
+            Location = locationid;
+            AccountID = accountid;
+            Date = date;
+        }
+
+        // Properties for the item location
+        public int RecordID { get; set; }
+        public int ItemID { get; set; }
+        public int Location { get; set; }
+        public int AccountID { get; set; }
+        public string Date { get; set; }
+    }
+
+
 }
+

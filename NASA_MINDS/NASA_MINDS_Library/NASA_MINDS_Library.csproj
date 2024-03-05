@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="sqliteDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
