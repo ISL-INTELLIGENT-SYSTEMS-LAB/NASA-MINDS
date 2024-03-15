@@ -322,5 +322,42 @@ namespace NASA_MINDS_Library
             }
         }
 
+        // Get specific items from the database
+        public static Item GetItem(int itemID)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to select the item from the database
+                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE itemID=@itemID", con);
+                cmd.Parameters.AddWithValue("@itemID", itemID);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                // If the item is not found, return null
+                if (!rdr.HasRows)
+                {
+                    rdr.Close();
+                    con.Close();
+                    return null;
+                }
+
+                // Create an item object from the data
+                Item item;
+                rdr.Read();
+                item = new Item(Convert.ToInt32(rdr["itemID"]),
+                                                rdr["itemName"].ToString(),
+                                                rdr["itemDescription"].ToString(),
+                                                rdr["serial"].ToString(),
+                                                Convert.ToInt32(rdr["conditionalStatus"]),
+                                                rdr["RN"].ToString(),
+                                                rdr["imageLocation"].ToString(),
+                                                Convert.ToInt32(rdr["RFID_Tag"]));
+                rdr.Close();
+                con.Close();
+                return item;
+            }
+        }
     }
 }
