@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingListCreation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingListCreation_Form.Designer.cs">
+      <DependentUpon>ShoppingListCreation_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShoppingListImport_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShoppingListCreation_Form.resx">
+      <DependentUpon>ShoppingListCreation_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShoppingListImport_Form.resx">
       <DependentUpon>ShoppingListImport_Form.cs</DependentUpon>
     </EmbeddedResource>

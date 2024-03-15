@@ -54,18 +54,28 @@ namespace Inventory_Tracking_and_Managment
         private void Btn_Forgot_Click(object sender, EventArgs e)
         {
             // Show message box with the password of the account that is being retrieved from the database
-            string username = TB_Username.Text;
-            account = sqliteDataAccess.RetriveAccount(username);
-            MessageBox.Show("Your password is: " + account.Password);
+            if (TB_Username.Text == "")
+            {
+                TB_Username.BackColor = Color.MistyRose;
+                return;
+            }
+            else
+            {
+                try
+                {
+                    account = sqliteDataAccess.RetriveAccount(TB_Username.Text);
+                    if (account == null)
+                    {
+                        throw new Exception();
+                    }
 
-            // account = sqliteDataAccess.RetriveAccount("taylorjb96");
-
-            /* Open the Menu_Form and close the Login_Form when the Login button is clicked
-            Hide();
-            var Menu_Form = new Menu_Form();
-            Menu_Form.Closed += (s, args) => Close();
-            Menu_Form.Show();
-            */
+                    MessageBox.Show(text: "Your password is: " + account.Password, caption: "Password");
+                }
+                catch
+                {
+                    MessageBox.Show("No known account with that username", caption: "Password");
+                }
+            }
         }
 
         private void TB_Password_KeyDown(object sender, KeyEventArgs e)

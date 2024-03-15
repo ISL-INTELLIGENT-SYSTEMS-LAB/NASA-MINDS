@@ -3,14 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml;
 
 
 namespace Inventory_Tracking_and_Managment
 {
     public partial class ShoppingListImport_Form : Form
     {
-        // Create a list of items from the database
-        private List<Item> items = new List<Item>();
+        List<Item> dbitems = new List<Item>();
+        List<Location> locations = sqliteDataAccess.GetAllLocations();
+
         public ShoppingListImport_Form()
         {
             InitializeComponent();
@@ -27,15 +29,44 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_LoadItems_Click(object sender, EventArgs e)
         {
-            // Populate the list of items from the database
-            items.Add(sqliteDataAccess.PopulateData("1"));
-            items.Add(sqliteDataAccess.PopulateData("2"));
-            items.Add(sqliteDataAccess.PopulateData("3"));
+            // Open a file dialog to select a XML file
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML Files|*.xml";
+            openFileDialog.Title = "Select a XML file";
+            openFileDialog.CheckFileExists = true;
+            openFileDialog.CheckPathExists = true;
 
-            foreach (Item item in items)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                AddRows(item);
+                // Get the file path and load the items from the XML file
+                XmlDocument xml = new XmlDocument();
+                xml.Load(openFileDialog.FileName);
+                XmlNodeList xmlItems = xml.GetElementsByTagName("Item");
+
+                // Create a list of items
+                List<int> items = new List<int>();
+
+                // Loop through the XML items and add them to the list
+                foreach (XmlNode xmlItem in xmlItems)
+                {
+                    items.Add(int.Parse(xmlItem["ItemID"].InnerText));
+                }
+
+
+                // Add the items to the datagridview
+                foreach (int item in items)
+                {
+                    // retrieve the item from the database
+                    Item dbitem = sqliteDataAccess.GetItem(item);
+
+                    // Add the item to the datagridview
+                    AddRows(dbitem);
+                    dbitems.Add(dbitem);
+                }
+
             }
+
+            
         }
 
         private void AddRows(Item item)
@@ -90,8 +121,12 @@ namespace Inventory_Tracking_and_Managment
             {
                 // Get selected row index from the datagridview and update image in the PB_Item picturebox
                 int index = dataGridView1.CurrentCell.RowIndex;
-                string imageLocation = currentDir + "/images/" + items.Find(x => x.ItemName == dataGridView1.Rows[index].Cells[0].Value.ToString()).Image_loc;
+                string imageLocation = currentDir + "/images/" + dbitems.Find(x => x.ItemName == dataGridView1.Rows[index].Cells[0].Value.ToString()).Image_loc;
                 PB_Item.BackgroundImage = new Bitmap(imageLocation);
+
+                // Change the L_LastLocation label to the current location of the item
+                string location = locations.Find(x => x.LocationID == sqliteDataAccess.GetItemLocation(dbitems.Find(y => y.ItemName == dataGridView1.Rows[index].Cells[0].Value.ToString()).ItemID).Location).LocationName;
+                L_LastLocation.Text = location;
             }
             catch
             {

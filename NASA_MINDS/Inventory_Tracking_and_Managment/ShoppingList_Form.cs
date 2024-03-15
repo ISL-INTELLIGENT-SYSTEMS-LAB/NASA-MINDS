@@ -32,5 +32,13 @@ namespace Inventory_Tracking_and_Managment
             ShoppingLisImport_Form.Closed += (s, args) => Close();
             ShoppingLisImport_Form.Show();
         }
+
+        private void Btn_Create_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var ShoppingLisCreation_Form = new ShoppingListCreation_Form();
+            ShoppingLisCreation_Form.Closed += (s, args) => Close();
+            ShoppingLisCreation_Form.Show();
+        }
     }
 }
