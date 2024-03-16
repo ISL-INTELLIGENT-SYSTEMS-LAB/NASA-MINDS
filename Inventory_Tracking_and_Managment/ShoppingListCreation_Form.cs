@@ -87,6 +87,19 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_AddItem_Click(object sender, EventArgs e)
         {
+            // Check if an item has been selected in the combo box
+            if (CB_ItemSelector.SelectedIndex == -1)
+            {
+                MessageBox.Show("No item has been selected!", "Alert");
+                return;
+            }
+            //  Check if item that they are trying to add exists in the database
+            else if (!items.Exists(x => x.ItemName == CB_ItemSelector.Text))
+            {
+                MessageBox.Show("The item your trying to add doesn't exist in our records.", "Alert");
+                return;
+            }
+
             // Add the selected item to the shopping list and display it in the list box
             LB_ShoppingList.Items.Add(CB_ItemSelector.Text);
             shoppingList.Add(items[CB_ItemSelector.SelectedIndex]);
@@ -168,6 +181,25 @@ namespace Inventory_Tracking_and_Managment
                 string imagePath = currentDir + "Default.png";
                 PB_Item.BackgroundImage = Image.FromFile(imagePath);
             }
+        }
+
+        private void Btn_Remove_Click(object sender, EventArgs e)
+        {
+            if (LB_ShoppingList.SelectedIndex == -1)
+            {
+                MessageBox.Show("No item has been selected!", "Alert");
+                return;
+            }
+            // Get the selected item from the list box and the index of the selected item
+            string selectedItem = LB_ShoppingList.SelectedItem.ToString();
+            int index = LB_ShoppingList.SelectedIndex;
+            string itemName = shoppingList[index].ItemName;
+
+            // Remove the selected item from the shopping list and the list box
+            shoppingList.RemoveAt(index);
+            LB_ShoppingList.Items.Remove(selectedItem);
+
+            MessageBox.Show(itemName + " has been removed from the shopping list!", "Alert");
         }
     }
 }

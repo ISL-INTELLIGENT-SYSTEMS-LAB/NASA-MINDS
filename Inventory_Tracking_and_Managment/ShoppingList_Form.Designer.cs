@@ -33,26 +33,30 @@
             this.Btn_Import = new System.Windows.Forms.Button();
             this.Btn_Create = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Back
             // 
-            this.Btn_Back.BackColor = System.Drawing.Color.Red;
-            this.Btn_Back.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Back.Location = new System.Drawing.Point(103, 18);
+            this.Btn_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Back.Location = new System.Drawing.Point(13, 16);
             this.Btn_Back.Name = "Btn_Back";
-            this.Btn_Back.Size = new System.Drawing.Size(72, 30);
+            this.Btn_Back.Size = new System.Drawing.Size(92, 92);
             this.Btn_Back.TabIndex = 21;
-            this.Btn_Back.Text = "Back";
+            this.Btn_Back.Text = "Back 🡸";
             this.Btn_Back.UseVisualStyleBackColor = false;
             this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // Btn_Import
             // 
-            this.Btn_Import.BackColor = System.Drawing.Color.Red;
-            this.Btn_Import.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Import.Location = new System.Drawing.Point(9, 82);
+            this.Btn_Import.BackColor = System.Drawing.Color.Moccasin;
+            this.Btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Import.Location = new System.Drawing.Point(111, 16);
             this.Btn_Import.Name = "Btn_Import";
             this.Btn_Import.Size = new System.Drawing.Size(123, 43);
             this.Btn_Import.TabIndex = 22;
@@ -62,9 +66,10 @@
             // 
             // Btn_Create
             // 
-            this.Btn_Create.BackColor = System.Drawing.Color.Red;
-            this.Btn_Create.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Create.Location = new System.Drawing.Point(138, 82);
+            this.Btn_Create.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Create.Location = new System.Drawing.Point(111, 65);
             this.Btn_Create.Name = "Btn_Create";
             this.Btn_Create.Size = new System.Drawing.Size(123, 43);
             this.Btn_Create.TabIndex = 23;
@@ -82,8 +87,19 @@
             this.panel1.Location = new System.Drawing.Point(550, 413);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 152);
+            this.panel1.Size = new System.Drawing.Size(248, 122);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(1141, 801);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 182);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // ShoppingList_Form
             // 
@@ -91,15 +107,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1373, 995);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ShoppingList_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShoppingList_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,5 +128,6 @@
         private System.Windows.Forms.Button Btn_Import;
         private System.Windows.Forms.Button Btn_Create;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

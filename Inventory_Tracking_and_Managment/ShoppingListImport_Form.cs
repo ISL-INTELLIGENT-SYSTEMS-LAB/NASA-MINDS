@@ -105,6 +105,9 @@ namespace Inventory_Tracking_and_Managment
                 string itemName = dataGridView1.Rows[index].Cells[0].Value.ToString();
                 dataGridView1.Rows.RemoveAt(index);
                 LB_FoundItems.Items.Add(itemName);
+
+                PB_Item.BackgroundImage = null;
+                L_LastLocation.Text = "";
             }
             catch
             {
