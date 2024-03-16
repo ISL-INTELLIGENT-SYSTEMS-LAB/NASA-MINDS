@@ -18,10 +18,12 @@ namespace Inventory_Tracking_and_Managment
     public partial class IngestItems_Form : Form
     {
         List<Item> items = new List<Item>();
+        List<Location> locations = new List<Location>();
 
         public IngestItems_Form()
         {
             InitializeComponent();
+            populateLocations();
         }
         // Open file dialog to choose image and upload
         private void BtnIF_Upload_Click(object sender, EventArgs e)
@@ -102,7 +104,7 @@ namespace Inventory_Tracking_and_Managment
             // Clear all fields
             CBIF_Condition.Text = "";
             TBIF_Description.Text = "";
-            TBIF_Location.Text = "";
+            CBIF_Location.Text = "";
             TBIF_Name.Text = "";
             TBIF_Serial.Text = "";
             Btn_GenerateTagID.Text = "Generate ID #";
@@ -114,7 +116,7 @@ namespace Inventory_Tracking_and_Managment
         {
             CBIF_Condition.Text = "";
             TBIF_Description.Text = "";
-            TBIF_Location.Text = "";
+            CBIF_Location.Text = "";
             TBIF_Name.Text = "";
             TBIF_Serial.Text = "";
             Btn_GenerateTagID.Text = "Generate ID #";
@@ -143,6 +145,21 @@ namespace Inventory_Tracking_and_Managment
                 }
             }
             Btn_GenerateTagID.Text = tagID.ToString();
+        }
+        // Set the location of the item
+        private void populateLocations()
+        {
+            // Get all locations from the database and display them in the drop down
+            locations = sqliteDataAccess.GetAllLocations();
+            foreach (Location location in locations)
+            {
+                CBIF_Location.Items.Add(location.LocationName);
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
