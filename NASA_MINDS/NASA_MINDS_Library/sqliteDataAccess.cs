@@ -163,8 +163,6 @@ namespace NASA_MINDS_Library
             }
         }
 
-
-
         public static void UpdateItem(int itemID, string itemName, string itemDescription, string serial, int conditionalStatus, string RN, string imageLocation, int RFID_Tag)
         {
             // Open a connection to the database
@@ -357,6 +355,60 @@ namespace NASA_MINDS_Library
                 rdr.Close();
                 con.Close();
                 return item;
+            }
+        }
+
+        // Get specific locations from the database
+        public static Location GetLocation(int locationID)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to select the location from the database
+                var cmd = new SQLiteCommand("SELECT * FROM Locations WHERE locationID=@locationID", con);
+                cmd.Parameters.AddWithValue("@locationID", locationID);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                // If the location is not found, return null
+                if (!rdr.HasRows)
+                {
+                    rdr.Close();
+                    con.Close();
+                    return null;
+                }
+
+                // Create a location object from the data
+                Location location;
+                rdr.Read();
+                location = new Location(Convert.ToInt32(rdr["locationID"]),
+                                                        rdr["locationName"].ToString(),
+                                                        rdr["locationDescription"].ToString());
+                rdr.Close();
+                con.Close();
+                return location;
+            }
+        }
+
+        // Update the location in the database
+        public static void UpdateLocation(int locationID, string locationName, string locationDescription)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to update the location in the database
+                var cmd = new SQLiteCommand("UPDATE Locations SET locationName=@locationName, locationDescription=@locationDescription WHERE locationID=@locationID", con);
+                cmd.Parameters.AddWithValue("@locationID", locationID);
+                cmd.Parameters.AddWithValue("@locationName", locationName);
+                cmd.Parameters.AddWithValue("@locationDescription", locationDescription);
+
+                // Execute the command and close the connection to the database
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
             }
         }
     }
