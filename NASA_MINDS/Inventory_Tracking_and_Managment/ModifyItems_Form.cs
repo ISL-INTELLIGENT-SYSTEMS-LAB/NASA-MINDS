@@ -73,6 +73,18 @@ namespace Inventory_Tracking_and_Managment
             TB_Serial.Text = items[CB_ItemSearch.SelectedIndex].SerialNum;
             TB_Ro.Text = items[CB_ItemSearch.SelectedIndex].RNNum.ToString();
             L_TagId.Text = items[CB_ItemSearch.SelectedIndex].RFID.ToString();
+            
+            // Populate Tb_Location with the location of the item
+            ItemLocation location = sqliteDataAccess.GetItemLocation(items[CB_ItemSearch.SelectedIndex].ItemID);
+            if (location == null)
+            {
+                TB_Location.Text = "Not Assigned";
+            }
+            else
+            {
+                Location dblocation = sqliteDataAccess.GetLocation(location.Location);
+                TB_Location.Text = dblocation.LocationName;
+            }
 
             // Switch case statement to assign combobox value based on item condition integer
             int condition = items[CB_ItemSearch.SelectedIndex].Condition;
@@ -212,6 +224,14 @@ namespace Inventory_Tracking_and_Managment
         {
             int number = rnd.Next(100, 1000);
             L_TagId.Text = number.ToString();
+        }
+
+        private void Btn_EditLocation_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var LocationEdit_Form = new LocationEdit_Form();
+            LocationEdit_Form.Closed += (s, args) => Close();
+            LocationEdit_Form.Show();
         }
     }
 }
