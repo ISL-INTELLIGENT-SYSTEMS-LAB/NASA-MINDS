@@ -32,7 +32,6 @@
             this.P_ = new System.Windows.Forms.Panel();
             this.Btn_EditLocation = new System.Windows.Forms.Button();
             this.L_Location = new System.Windows.Forms.Label();
-            this.TB_Location = new System.Windows.Forms.TextBox();
             this.CB_Condition = new System.Windows.Forms.ComboBox();
             this.Btn_GenTagID = new System.Windows.Forms.Button();
             this.Btn_Submit = new System.Windows.Forms.Button();
@@ -53,17 +52,20 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Pb_Item = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CB_Location = new System.Windows.Forms.ComboBox();
             this.P_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Item)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // P_
             // 
             this.P_.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.P_.BackColor = System.Drawing.Color.White;
+            this.P_.Controls.Add(this.CB_Location);
             this.P_.Controls.Add(this.Btn_EditLocation);
             this.P_.Controls.Add(this.L_Location);
-            this.P_.Controls.Add(this.TB_Location);
             this.P_.Controls.Add(this.CB_Condition);
             this.P_.Controls.Add(this.Btn_GenTagID);
             this.P_.Controls.Add(this.Btn_Submit);
@@ -90,8 +92,9 @@
             // 
             // Btn_EditLocation
             // 
-            this.Btn_EditLocation.BackColor = System.Drawing.Color.Red;
-            this.Btn_EditLocation.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_EditLocation.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_EditLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_EditLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_EditLocation.Location = new System.Drawing.Point(931, 14);
             this.Btn_EditLocation.Name = "Btn_EditLocation";
             this.Btn_EditLocation.Size = new System.Drawing.Size(133, 30);
@@ -111,15 +114,6 @@
             this.L_Location.TabIndex = 39;
             this.L_Location.Text = "Location: ";
             // 
-            // TB_Location
-            // 
-            this.TB_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.TB_Location.Location = new System.Drawing.Point(694, 144);
-            this.TB_Location.Margin = new System.Windows.Forms.Padding(2);
-            this.TB_Location.Name = "TB_Location";
-            this.TB_Location.Size = new System.Drawing.Size(225, 44);
-            this.TB_Location.TabIndex = 38;
-            // 
             // CB_Condition
             // 
             this.CB_Condition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -133,14 +127,15 @@
             "Unknown"});
             this.CB_Condition.Location = new System.Drawing.Point(697, 327);
             this.CB_Condition.Name = "CB_Condition";
-            this.CB_Condition.Size = new System.Drawing.Size(223, 45);
+            this.CB_Condition.Size = new System.Drawing.Size(284, 45);
             this.CB_Condition.TabIndex = 37;
             // 
             // Btn_GenTagID
             // 
-            this.Btn_GenTagID.BackColor = System.Drawing.Color.Red;
-            this.Btn_GenTagID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_GenTagID.Location = new System.Drawing.Point(1011, 534);
+            this.Btn_GenTagID.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Btn_GenTagID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_GenTagID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_GenTagID.Location = new System.Drawing.Point(931, 487);
             this.Btn_GenTagID.Name = "Btn_GenTagID";
             this.Btn_GenTagID.Size = new System.Drawing.Size(152, 30);
             this.Btn_GenTagID.TabIndex = 36;
@@ -150,8 +145,9 @@
             // 
             // Btn_Submit
             // 
-            this.Btn_Submit.BackColor = System.Drawing.Color.Red;
-            this.Btn_Submit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Submit.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Submit.Location = new System.Drawing.Point(1091, 14);
             this.Btn_Submit.Name = "Btn_Submit";
             this.Btn_Submit.Size = new System.Drawing.Size(72, 30);
@@ -163,7 +159,7 @@
             // L_Filename
             // 
             this.L_Filename.AutoSize = true;
-            this.L_Filename.Location = new System.Drawing.Point(184, 510);
+            this.L_Filename.Location = new System.Drawing.Point(116, 510);
             this.L_Filename.Name = "L_Filename";
             this.L_Filename.Size = new System.Drawing.Size(54, 13);
             this.L_Filename.TabIndex = 34;
@@ -171,9 +167,10 @@
             // 
             // Btn_Upload
             // 
-            this.Btn_Upload.BackColor = System.Drawing.Color.Red;
-            this.Btn_Upload.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Upload.Location = new System.Drawing.Point(106, 500);
+            this.Btn_Upload.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Btn_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Upload.Location = new System.Drawing.Point(38, 500);
             this.Btn_Upload.Name = "Btn_Upload";
             this.Btn_Upload.Size = new System.Drawing.Size(72, 30);
             this.Btn_Upload.TabIndex = 33;
@@ -196,16 +193,16 @@
             this.TB_Serial.Location = new System.Drawing.Point(697, 421);
             this.TB_Serial.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Serial.Name = "TB_Serial";
-            this.TB_Serial.Size = new System.Drawing.Size(223, 44);
+            this.TB_Serial.Size = new System.Drawing.Size(284, 44);
             this.TB_Serial.TabIndex = 30;
             // 
             // TB_Name
             // 
             this.TB_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.TB_Name.Location = new System.Drawing.Point(694, 96);
+            this.TB_Name.Location = new System.Drawing.Point(698, 96);
             this.TB_Name.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Name.Name = "TB_Name";
-            this.TB_Name.Size = new System.Drawing.Size(225, 44);
+            this.TB_Name.Size = new System.Drawing.Size(283, 44);
             this.TB_Name.TabIndex = 28;
             // 
             // label3
@@ -253,8 +250,9 @@
             // 
             // Btn_Back
             // 
-            this.Btn_Back.BackColor = System.Drawing.Color.Red;
-            this.Btn_Back.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Back.Location = new System.Drawing.Point(19, 14);
             this.Btn_Back.Name = "Btn_Back";
             this.Btn_Back.Size = new System.Drawing.Size(72, 30);
@@ -267,7 +265,7 @@
             // 
             this.L_TagId.AutoSize = true;
             this.L_TagId.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TagId.Location = new System.Drawing.Point(691, 378);
+            this.L_TagId.Location = new System.Drawing.Point(701, 375);
             this.L_TagId.Name = "L_TagId";
             this.L_TagId.Size = new System.Drawing.Size(0, 37);
             this.L_TagId.TabIndex = 18;
@@ -327,6 +325,27 @@
             this.Pb_Item.TabIndex = 0;
             this.Pb_Item.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(1305, 479);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 205);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // CB_Location
+            // 
+            this.CB_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.CB_Location.FormattingEnabled = true;
+            this.CB_Location.Location = new System.Drawing.Point(698, 145);
+            this.CB_Location.Name = "CB_Location";
+            this.CB_Location.Size = new System.Drawing.Size(283, 45);
+            this.CB_Location.TabIndex = 41;
+            // 
             // ModifyItems_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +354,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1542, 699);
             this.Controls.Add(this.P_);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModifyItems_Form";
             this.Text = "ModifyItems_Form";
@@ -343,6 +364,7 @@
             this.P_.ResumeLayout(false);
             this.P_.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Item)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -371,7 +393,8 @@
         private System.Windows.Forms.Button Btn_GenTagID;
         private System.Windows.Forms.ComboBox CB_Condition;
         private System.Windows.Forms.Label L_Location;
-        private System.Windows.Forms.TextBox TB_Location;
         private System.Windows.Forms.Button Btn_EditLocation;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox CB_Location;
     }
 }

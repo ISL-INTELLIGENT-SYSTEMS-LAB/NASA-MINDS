@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngestItems_Form));
             this.PBIF_Pic = new System.Windows.Forms.PictureBox();
             this.TBIF_Name = new System.Windows.Forms.TextBox();
             this.TBIF_Description = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             // 
             // PBIF_Pic
             // 
+            this.PBIF_Pic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBIF_Pic.BackgroundImage")));
             this.PBIF_Pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PBIF_Pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PBIF_Pic.Location = new System.Drawing.Point(88, 85);
@@ -74,10 +76,10 @@
             // 
             // TBIF_Description
             // 
-            this.TBIF_Description.Location = new System.Drawing.Point(840, 116);
+            this.TBIF_Description.Location = new System.Drawing.Point(840, 104);
             this.TBIF_Description.Multiline = true;
             this.TBIF_Description.Name = "TBIF_Description";
-            this.TBIF_Description.Size = new System.Drawing.Size(351, 67);
+            this.TBIF_Description.Size = new System.Drawing.Size(351, 93);
             this.TBIF_Description.TabIndex = 2;
             // 
             // TBIF_Serial
@@ -96,18 +98,22 @@
             // 
             // BtnIF_Upload
             // 
+            this.BtnIF_Upload.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BtnIF_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIF_Upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIF_Upload.Location = new System.Drawing.Point(88, 499);
             this.BtnIF_Upload.Name = "BtnIF_Upload";
             this.BtnIF_Upload.Size = new System.Drawing.Size(140, 42);
             this.BtnIF_Upload.TabIndex = 9;
             this.BtnIF_Upload.Text = "Upload";
-            this.BtnIF_Upload.UseVisualStyleBackColor = true;
+            this.BtnIF_Upload.UseVisualStyleBackColor = false;
             this.BtnIF_Upload.Click += new System.EventHandler(this.BtnIF_Upload_Click);
             // 
             // BtnIF_Submit
             // 
-            this.BtnIF_Submit.BackColor = System.Drawing.Color.Lime;
-            this.BtnIF_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIF_Submit.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnIF_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIF_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIF_Submit.Location = new System.Drawing.Point(1253, 553);
             this.BtnIF_Submit.Name = "BtnIF_Submit";
             this.BtnIF_Submit.Size = new System.Drawing.Size(122, 41);
@@ -130,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(722, 116);
+            this.label4.Location = new System.Drawing.Point(722, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 12;
@@ -140,7 +146,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(722, 206);
+            this.label8.Location = new System.Drawing.Point(722, 221);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 13;
@@ -178,18 +184,22 @@
             // 
             // Btn_GenerateTagID
             // 
+            this.Btn_GenerateTagID.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Btn_GenerateTagID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_GenerateTagID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_GenerateTagID.Location = new System.Drawing.Point(920, 477);
             this.Btn_GenerateTagID.Name = "Btn_GenerateTagID";
             this.Btn_GenerateTagID.Size = new System.Drawing.Size(192, 36);
             this.Btn_GenerateTagID.TabIndex = 17;
             this.Btn_GenerateTagID.Text = "Generate ID #";
-            this.Btn_GenerateTagID.UseVisualStyleBackColor = true;
+            this.Btn_GenerateTagID.UseVisualStyleBackColor = false;
             this.Btn_GenerateTagID.Click += new System.EventHandler(this.Btn_GenerateTagID_Click);
             // 
             // BtnIF_Back
             // 
-            this.BtnIF_Back.BackColor = System.Drawing.Color.Red;
-            this.BtnIF_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIF_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnIF_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIF_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIF_Back.Location = new System.Drawing.Point(12, 13);
             this.BtnIF_Back.Name = "BtnIF_Back";
             this.BtnIF_Back.Size = new System.Drawing.Size(122, 41);
@@ -200,25 +210,29 @@
             // 
             // CBIF_Condition
             // 
+            this.CBIF_Condition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBIF_Condition.FormattingEnabled = true;
             this.CBIF_Condition.Items.AddRange(new object[] {
             "New",
             "Good",
             "Needs Repair",
             "Broken"});
-            this.CBIF_Condition.Location = new System.Drawing.Point(840, 207);
+            this.CBIF_Condition.Location = new System.Drawing.Point(840, 222);
             this.CBIF_Condition.Name = "CBIF_Condition";
             this.CBIF_Condition.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Condition.TabIndex = 19;
             // 
             // Btn_ClearAllFields
             // 
+            this.Btn_ClearAllFields.BackColor = System.Drawing.Color.LightCoral;
+            this.Btn_ClearAllFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ClearAllFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ClearAllFields.Location = new System.Drawing.Point(968, 519);
             this.Btn_ClearAllFields.Name = "Btn_ClearAllFields";
-            this.Btn_ClearAllFields.Size = new System.Drawing.Size(92, 24);
+            this.Btn_ClearAllFields.Size = new System.Drawing.Size(92, 33);
             this.Btn_ClearAllFields.TabIndex = 20;
             this.Btn_ClearAllFields.Text = "Clear All Fields";
-            this.Btn_ClearAllFields.UseVisualStyleBackColor = true;
+            this.Btn_ClearAllFields.UseVisualStyleBackColor = false;
             this.Btn_ClearAllFields.Click += new System.EventHandler(this.Btn_ClearAllFields_Click);
             // 
             // LIF_Filename
@@ -242,8 +256,9 @@
             // 
             // CBIF_Location
             // 
+            this.CBIF_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBIF_Location.FormattingEnabled = true;
-            this.CBIF_Location.Location = new System.Drawing.Point(840, 273);
+            this.CBIF_Location.Location = new System.Drawing.Point(840, 275);
             this.CBIF_Location.Name = "CBIF_Location";
             this.CBIF_Location.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Location.TabIndex = 23;
@@ -297,6 +312,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IngestItems_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

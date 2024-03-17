@@ -17,6 +17,7 @@ namespace Inventory_Tracking_and_Managment
     public partial class ModifyItems_Form : Form
     {
         List<Item> items = new List<Item>();
+        List<Location> locations = new List<Location>();
         Random rnd = new Random();
 
         public ModifyItems_Form()
@@ -25,8 +26,11 @@ namespace Inventory_Tracking_and_Managment
 
             // Populate the datagridview with items
             items = sqliteDataAccess.GetAllItems();
+            locations = sqliteDataAccess.GetAllLocations();
             CB_ItemSearch.DataSource = items;
             CB_ItemSearch.DisplayMember = "ItemName";
+            CB_Location.DataSource = locations;
+            CB_Location.DisplayMember = "LocationName";
         }
 
         private void Btn_Upload_Click(object sender, EventArgs e)
@@ -73,18 +77,18 @@ namespace Inventory_Tracking_and_Managment
             TB_Serial.Text = items[CB_ItemSearch.SelectedIndex].SerialNum;
             TB_Ro.Text = items[CB_ItemSearch.SelectedIndex].RNNum.ToString();
             L_TagId.Text = items[CB_ItemSearch.SelectedIndex].RFID.ToString();
-            
-            // Populate Tb_Location with the location of the item
+
+            // Set location combobox to the item's location within the database
             ItemLocation location = sqliteDataAccess.GetItemLocation(items[CB_ItemSearch.SelectedIndex].ItemID);
+
             if (location == null)
             {
-                TB_Location.Text = "Not Assigned";
+                MessageBox.Show("Location not found in database", "Error");
+                return;
             }
-            else
-            {
-                Location dblocation = sqliteDataAccess.GetLocation(location.Location);
-                TB_Location.Text = dblocation.LocationName;
-            }
+
+            int locationIndex = CB_Location.FindString(sqliteDataAccess.GetLocation(location.Location).LocationName);
+            CB_Location.SelectedIndex = locationIndex;
 
             // Switch case statement to assign combobox value based on item condition integer
             int condition = items[CB_ItemSearch.SelectedIndex].Condition;
@@ -211,6 +215,11 @@ namespace Inventory_Tracking_and_Managment
 
             // Update the item in the database
             sqliteDataAccess.UpdateItem(id, name, description, serial, conditionint, ro, image, rfid);
+
+            // Update the locationid of the item in the database
+            int locationID = locations[CB_Location.SelectedIndex].LocationID;
+            sqliteDataAccess.UpdateItemLocation(id, locationID);
+
             
             // Update the item in the list
             items[CB_ItemSearch.SelectedIndex] = new Item(id, name, description, serial, conditionint, ro, image, rfid);
