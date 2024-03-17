@@ -298,9 +298,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1625, 802);
+            this.pictureBox1.Location = new System.Drawing.Point(1675, 832);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 205);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 

@@ -51,13 +51,13 @@
             this.Btn_Generate = new System.Windows.Forms.Button();
             this.Btn_Clear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Btn_Remove = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.Btn_AddItem = new System.Windows.Forms.Button();
             this.PB_Item = new System.Windows.Forms.PictureBox();
             this.Btn_Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Btn_Remove = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -306,6 +306,25 @@
             this.panel1.Size = new System.Drawing.Size(835, 609);
             this.panel1.TabIndex = 22;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(404, 320);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Remove";
+            // 
+            // Btn_Remove
+            // 
+            this.Btn_Remove.Location = new System.Drawing.Point(404, 339);
+            this.Btn_Remove.Name = "Btn_Remove";
+            this.Btn_Remove.Size = new System.Drawing.Size(46, 23);
+            this.Btn_Remove.TabIndex = 26;
+            this.Btn_Remove.Text = "🡸";
+            this.Btn_Remove.UseVisualStyleBackColor = true;
+            this.Btn_Remove.Click += new System.EventHandler(this.Btn_Remove_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -350,30 +369,11 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1337, 610);
+            this.pictureBox1.Location = new System.Drawing.Point(1382, 617);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 182);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(404, 320);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 13);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Remove";
-            // 
-            // Btn_Remove
-            // 
-            this.Btn_Remove.Location = new System.Drawing.Point(404, 339);
-            this.Btn_Remove.Name = "Btn_Remove";
-            this.Btn_Remove.Size = new System.Drawing.Size(46, 23);
-            this.Btn_Remove.TabIndex = 26;
-            this.Btn_Remove.Text = "🡸";
-            this.Btn_Remove.UseVisualStyleBackColor = true;
-            this.Btn_Remove.Click += new System.EventHandler(this.Btn_Remove_Click);
             // 
             // ShoppingListCreation_Form
             // 

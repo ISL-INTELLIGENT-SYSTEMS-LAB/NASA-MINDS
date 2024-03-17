@@ -35,12 +35,12 @@
             this.L_Password = new System.Windows.Forms.Label();
             this.TB_Password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_ShowPass = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Forgot = new System.Windows.Forms.Button();
             this.Btn_Login = new System.Windows.Forms.Button();
-            this.Btn_ShowPass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,9 +71,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1576, 750);
+            this.pictureBox1.Location = new System.Drawing.Point(1717, 854);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 279);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -96,7 +96,7 @@
             this.TB_Password.Location = new System.Drawing.Point(386, 337);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.PasswordChar = '*';
-            this.TB_Password.Size = new System.Drawing.Size(400, 49);
+            this.TB_Password.Size = new System.Drawing.Size(354, 49);
             this.TB_Password.TabIndex = 3;
             this.TB_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Password_KeyDown);
             // 
@@ -120,6 +120,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(840, 565);
             this.panel1.TabIndex = 5;
+            // 
+            // Btn_ShowPass
+            // 
+            this.Btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ShowPass.Location = new System.Drawing.Point(746, 337);
+            this.Btn_ShowPass.Name = "Btn_ShowPass";
+            this.Btn_ShowPass.Size = new System.Drawing.Size(40, 48);
+            this.Btn_ShowPass.TabIndex = 10;
+            this.Btn_ShowPass.Text = "👁️";
+            this.Btn_ShowPass.UseVisualStyleBackColor = true;
+            this.Btn_ShowPass.Click += new System.EventHandler(this.Btn_ShowPass_Click);
             // 
             // label5
             // 
@@ -145,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 15);
+            this.label3.Location = new System.Drawing.Point(64, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(719, 75);
             this.label3.TabIndex = 7;
@@ -153,36 +165,29 @@
             // 
             // Btn_Forgot
             // 
+            this.Btn_Forgot.BackColor = System.Drawing.Color.LightCoral;
+            this.Btn_Forgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Forgot.Location = new System.Drawing.Point(606, 449);
+            this.Btn_Forgot.Location = new System.Drawing.Point(577, 449);
             this.Btn_Forgot.Name = "Btn_Forgot";
-            this.Btn_Forgot.Size = new System.Drawing.Size(180, 87);
+            this.Btn_Forgot.Size = new System.Drawing.Size(209, 87);
             this.Btn_Forgot.TabIndex = 6;
             this.Btn_Forgot.Text = "Forgot";
-            this.Btn_Forgot.UseVisualStyleBackColor = true;
+            this.Btn_Forgot.UseVisualStyleBackColor = false;
             this.Btn_Forgot.Click += new System.EventHandler(this.Btn_Forgot_Click);
             // 
             // Btn_Login
             // 
+            this.Btn_Login.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Login.Location = new System.Drawing.Point(57, 449);
             this.Btn_Login.Name = "Btn_Login";
-            this.Btn_Login.Size = new System.Drawing.Size(543, 87);
+            this.Btn_Login.Size = new System.Drawing.Size(514, 87);
             this.Btn_Login.TabIndex = 5;
             this.Btn_Login.Text = "Log in";
-            this.Btn_Login.UseVisualStyleBackColor = true;
+            this.Btn_Login.UseVisualStyleBackColor = false;
             this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
-            // 
-            // Btn_ShowPass
-            // 
-            this.Btn_ShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ShowPass.Location = new System.Drawing.Point(792, 336);
-            this.Btn_ShowPass.Name = "Btn_ShowPass";
-            this.Btn_ShowPass.Size = new System.Drawing.Size(40, 48);
-            this.Btn_ShowPass.TabIndex = 10;
-            this.Btn_ShowPass.Text = "👁️";
-            this.Btn_ShowPass.UseVisualStyleBackColor = true;
-            this.Btn_ShowPass.Click += new System.EventHandler(this.Btn_ShowPass_Click);
             // 
             // Login_Form
             // 

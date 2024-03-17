@@ -42,11 +42,12 @@
             // 
             // Btn_Submit
             // 
-            this.Btn_Submit.BackColor = System.Drawing.Color.Red;
-            this.Btn_Submit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.Btn_Submit.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Submit.Location = new System.Drawing.Point(283, 368);
             this.Btn_Submit.Name = "Btn_Submit";
-            this.Btn_Submit.Size = new System.Drawing.Size(93, 41);
+            this.Btn_Submit.Size = new System.Drawing.Size(105, 41);
             this.Btn_Submit.TabIndex = 0;
             this.Btn_Submit.Text = "Submit";
             this.Btn_Submit.UseVisualStyleBackColor = false;
@@ -78,9 +79,9 @@
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(48, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 35);
+            this.label3.Size = new System.Drawing.Size(312, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Reenter Password:";
+            this.label3.Text = "Re-Enter Password:";
             // 
             // Tb_CurrentPassword
             // 
@@ -114,11 +115,12 @@
             // 
             // Btn_Cancel
             // 
-            this.Btn_Cancel.BackColor = System.Drawing.Color.Red;
-            this.Btn_Cancel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.Btn_Cancel.Location = new System.Drawing.Point(423, 368);
+            this.Btn_Cancel.BackColor = System.Drawing.Color.LightCoral;
+            this.Btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.Btn_Cancel.Location = new System.Drawing.Point(410, 368);
             this.Btn_Cancel.Name = "Btn_Cancel";
-            this.Btn_Cancel.Size = new System.Drawing.Size(93, 41);
+            this.Btn_Cancel.Size = new System.Drawing.Size(106, 41);
             this.Btn_Cancel.TabIndex = 7;
             this.Btn_Cancel.Text = "Cancel";
             this.Btn_Cancel.UseVisualStyleBackColor = false;
@@ -126,6 +128,7 @@
             // 
             // Btn_ShowPass
             // 
+            this.Btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ShowPass.Location = new System.Drawing.Point(724, 75);
             this.Btn_ShowPass.Name = "Btn_ShowPass";

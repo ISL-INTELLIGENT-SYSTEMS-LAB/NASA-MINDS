@@ -48,10 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Pb_Item = new System.Windows.Forms.PictureBox();
-            this.RTB_Location = new System.Windows.Forms.RichTextBox();
+            this.TB_ItemLocation = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Item)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,10 +61,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1728, 535);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(1680, 689);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 143);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -70,7 +71,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.RTB_Location);
+            this.panel1.Controls.Add(this.TB_ItemLocation);
             this.panel1.Controls.Add(this.L_Location);
             this.panel1.Controls.Add(this.L_Locationi);
             this.panel1.Controls.Add(this.L_Condition);
@@ -88,31 +89,28 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.Pb_Item);
-            this.panel1.Location = new System.Drawing.Point(133, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(457, 180);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1589, 718);
+            this.panel1.Size = new System.Drawing.Size(766, 384);
             this.panel1.TabIndex = 1;
             // 
             // L_Location
             // 
             this.L_Location.AutoSize = true;
             this.L_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Location.Location = new System.Drawing.Point(870, 179);
-            this.L_Location.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_Location.Location = new System.Drawing.Point(628, 131);
             this.L_Location.Name = "L_Location";
-            this.L_Location.Size = new System.Drawing.Size(0, 46);
+            this.L_Location.Size = new System.Drawing.Size(0, 37);
             this.L_Location.TabIndex = 29;
             // 
             // L_Locationi
             // 
             this.L_Locationi.AutoSize = true;
-            this.L_Locationi.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Locationi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.L_Locationi.ForeColor = System.Drawing.Color.Black;
-            this.L_Locationi.Location = new System.Drawing.Point(675, 179);
-            this.L_Locationi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_Locationi.Location = new System.Drawing.Point(365, 121);
             this.L_Locationi.Name = "L_Locationi";
-            this.L_Locationi.Size = new System.Drawing.Size(85, 20);
+            this.L_Locationi.Size = new System.Drawing.Size(83, 20);
             this.L_Locationi.TabIndex = 28;
             this.L_Locationi.Text = "Location:";
             // 
@@ -120,21 +118,19 @@
             // 
             this.L_Condition.AutoSize = true;
             this.L_Condition.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Condition.Location = new System.Drawing.Point(781, 498);
-            this.L_Condition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_Condition.Location = new System.Drawing.Point(461, 242);
             this.L_Condition.Name = "L_Condition";
-            this.L_Condition.Size = new System.Drawing.Size(0, 16);
+            this.L_Condition.Size = new System.Drawing.Size(0, 13);
             this.L_Condition.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(675, 494);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(365, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
+            this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Condition:";
             // 
@@ -142,11 +138,10 @@
             // 
             this.RTB_Description.Enabled = false;
             this.RTB_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RTB_Description.Location = new System.Drawing.Point(796, 340);
-            this.RTB_Description.Margin = new System.Windows.Forms.Padding(4);
+            this.RTB_Description.Location = new System.Drawing.Point(476, 149);
             this.RTB_Description.Name = "RTB_Description";
             this.RTB_Description.ReadOnly = true;
-            this.RTB_Description.Size = new System.Drawing.Size(563, 147);
+            this.RTB_Description.Size = new System.Drawing.Size(272, 86);
             this.RTB_Description.TabIndex = 24;
             this.RTB_Description.Text = "";
             // 
@@ -154,21 +149,19 @@
             // 
             this.L_SerialNum.AutoSize = true;
             this.L_SerialNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_SerialNum.Location = new System.Drawing.Point(769, 536);
-            this.L_SerialNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_SerialNum.Location = new System.Drawing.Point(446, 264);
             this.L_SerialNum.Name = "L_SerialNum";
-            this.L_SerialNum.Size = new System.Drawing.Size(0, 16);
+            this.L_SerialNum.Size = new System.Drawing.Size(0, 13);
             this.L_SerialNum.TabIndex = 23;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(674, 536);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(365, 257);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 22;
             this.label7.Text = "Serial #:";
             // 
@@ -178,21 +171,20 @@
             this.CB_ItemSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CB_ItemSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_ItemSearch.FormattingEnabled = true;
-            this.CB_ItemSearch.Location = new System.Drawing.Point(472, 54);
-            this.CB_ItemSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.CB_ItemSearch.Location = new System.Drawing.Point(93, 18);
             this.CB_ItemSearch.Name = "CB_ItemSearch";
-            this.CB_ItemSearch.Size = new System.Drawing.Size(596, 33);
+            this.CB_ItemSearch.Size = new System.Drawing.Size(655, 28);
             this.CB_ItemSearch.TabIndex = 21;
             this.CB_ItemSearch.SelectedIndexChanged += new System.EventHandler(this.CB_ItemSearch_SelectedIndexChanged);
             // 
             // Btn_Back
             // 
-            this.Btn_Back.BackColor = System.Drawing.Color.Red;
-            this.Btn_Back.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Back.Location = new System.Drawing.Point(25, 17);
-            this.Btn_Back.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Back.Location = new System.Drawing.Point(15, 18);
             this.Btn_Back.Name = "Btn_Back";
-            this.Btn_Back.Size = new System.Drawing.Size(96, 37);
+            this.Btn_Back.Size = new System.Drawing.Size(72, 30);
             this.Btn_Back.TabIndex = 20;
             this.Btn_Back.Text = "Back";
             this.Btn_Back.UseVisualStyleBackColor = false;
@@ -202,51 +194,46 @@
             // 
             this.L_TagId.AutoSize = true;
             this.L_TagId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TagId.Location = new System.Drawing.Point(753, 634);
-            this.L_TagId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_TagId.Location = new System.Drawing.Point(439, 302);
             this.L_TagId.Name = "L_TagId";
-            this.L_TagId.Size = new System.Drawing.Size(0, 16);
+            this.L_TagId.Size = new System.Drawing.Size(0, 13);
             this.L_TagId.TabIndex = 18;
             // 
             // L_RO
             // 
             this.L_RO.AutoSize = true;
             this.L_RO.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_RO.Location = new System.Drawing.Point(750, 590);
-            this.L_RO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_RO.Location = new System.Drawing.Point(426, 282);
             this.L_RO.Name = "L_RO";
-            this.L_RO.Size = new System.Drawing.Size(0, 16);
+            this.L_RO.Size = new System.Drawing.Size(0, 13);
             this.L_RO.TabIndex = 17;
             // 
             // L_Name
             // 
             this.L_Name.AutoSize = true;
             this.L_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Name.Location = new System.Drawing.Point(766, 145);
-            this.L_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_Name.Location = new System.Drawing.Point(431, 106);
             this.L_Name.Name = "L_Name";
-            this.L_Name.Size = new System.Drawing.Size(0, 16);
+            this.L_Name.Size = new System.Drawing.Size(0, 13);
             this.L_Name.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(672, 586);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(365, 277);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 20);
+            this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "RO #:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(668, 630);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(365, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 11;
@@ -255,24 +242,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(668, 340);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(365, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Description:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(678, 141);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(365, 101);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 20);
+            this.label9.Size = new System.Drawing.Size(60, 20);
             this.label9.TabIndex = 6;
             this.label9.Text = "Name:";
             // 
@@ -281,38 +266,43 @@
             this.Pb_Item.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pb_Item.BackgroundImage")));
             this.Pb_Item.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Pb_Item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Pb_Item.Location = new System.Drawing.Point(25, 133);
-            this.Pb_Item.Margin = new System.Windows.Forms.Padding(4);
+            this.Pb_Item.Location = new System.Drawing.Point(15, 54);
             this.Pb_Item.Name = "Pb_Item";
-            this.Pb_Item.Size = new System.Drawing.Size(613, 478);
+            this.Pb_Item.Size = new System.Drawing.Size(345, 312);
             this.Pb_Item.TabIndex = 0;
             this.Pb_Item.TabStop = false;
             // 
-            // RTB_Location
+            // TB_ItemLocation
             // 
-            this.RTB_Location.Enabled = false;
-            this.RTB_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RTB_Location.Location = new System.Drawing.Point(796, 181);
-            this.RTB_Location.Margin = new System.Windows.Forms.Padding(4);
-            this.RTB_Location.Name = "RTB_Location";
-            this.RTB_Location.ReadOnly = true;
-            this.RTB_Location.Size = new System.Drawing.Size(563, 147);
-            this.RTB_Location.TabIndex = 30;
-            this.RTB_Location.Text = "";
+            this.TB_ItemLocation.Location = new System.Drawing.Point(454, 123);
+            this.TB_ItemLocation.Name = "TB_ItemLocation";
+            this.TB_ItemLocation.Size = new System.Drawing.Size(294, 20);
+            this.TB_ItemLocation.TabIndex = 31;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(1442, 657);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(175, 175);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // FindItems_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1660, 726);
+            this.ClientSize = new System.Drawing.Size(1629, 844);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FindItems_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FindItems_Form";
@@ -321,6 +311,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Item)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,6 +337,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label L_Location;
         private System.Windows.Forms.Label L_Locationi;
-        private System.Windows.Forms.RichTextBox RTB_Location;
+        private System.Windows.Forms.TextBox TB_ItemLocation;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

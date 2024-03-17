@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyItems_Form));
             this.P_ = new System.Windows.Forms.Panel();
+            this.CB_Location = new System.Windows.Forms.ComboBox();
             this.Btn_EditLocation = new System.Windows.Forms.Button();
             this.L_Location = new System.Windows.Forms.Label();
             this.CB_Condition = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@
             this.Pb_Item = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CB_Location = new System.Windows.Forms.ComboBox();
             this.P_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +89,16 @@
             this.P_.Name = "P_";
             this.P_.Size = new System.Drawing.Size(1192, 583);
             this.P_.TabIndex = 2;
+            // 
+            // CB_Location
+            // 
+            this.CB_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.CB_Location.FormattingEnabled = true;
+            this.CB_Location.Location = new System.Drawing.Point(698, 145);
+            this.CB_Location.Name = "CB_Location";
+            this.CB_Location.Size = new System.Drawing.Size(283, 45);
+            this.CB_Location.TabIndex = 41;
             // 
             // Btn_EditLocation
             // 
@@ -330,21 +340,11 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1305, 479);
+            this.pictureBox1.Location = new System.Drawing.Point(1355, 512);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 205);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // CB_Location
-            // 
-            this.CB_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.CB_Location.FormattingEnabled = true;
-            this.CB_Location.Location = new System.Drawing.Point(698, 145);
-            this.CB_Location.Name = "CB_Location";
-            this.CB_Location.Size = new System.Drawing.Size(283, 45);
-            this.CB_Location.TabIndex = 41;
             // 
             // ModifyItems_Form
             // 

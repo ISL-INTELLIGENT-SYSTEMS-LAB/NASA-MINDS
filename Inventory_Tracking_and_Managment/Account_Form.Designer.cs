@@ -54,8 +54,10 @@
             // 
             // Btn_EditProfile
             // 
-            this.Btn_EditProfile.BackColor = System.Drawing.Color.Red;
-            this.Btn_EditProfile.Location = new System.Drawing.Point(1029, 14);
+            this.Btn_EditProfile.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_EditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_EditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_EditProfile.Location = new System.Drawing.Point(993, 16);
             this.Btn_EditProfile.Name = "Btn_EditProfile";
             this.Btn_EditProfile.Size = new System.Drawing.Size(30, 30);
             this.Btn_EditProfile.TabIndex = 11;
@@ -83,16 +85,17 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(120, 22);
+            this.panel2.Location = new System.Drawing.Point(219, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 516);
+            this.panel2.Size = new System.Drawing.Size(1036, 427);
             this.panel2.TabIndex = 13;
             // 
             // Btn_ChangePassword
             // 
-            this.Btn_ChangePassword.BackColor = System.Drawing.Color.Red;
-            this.Btn_ChangePassword.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ChangePassword.Location = new System.Drawing.Point(902, 470);
+            this.Btn_ChangePassword.BackColor = System.Drawing.Color.Moccasin;
+            this.Btn_ChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_ChangePassword.Location = new System.Drawing.Point(866, 380);
             this.Btn_ChangePassword.Name = "Btn_ChangePassword";
             this.Btn_ChangePassword.Size = new System.Drawing.Size(157, 30);
             this.Btn_ChangePassword.TabIndex = 19;
@@ -102,9 +105,10 @@
             // 
             // Btn_Back
             // 
-            this.Btn_Back.BackColor = System.Drawing.Color.Red;
-            this.Btn_Back.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Back.Location = new System.Drawing.Point(18, 13);
+            this.Btn_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Back.Location = new System.Drawing.Point(16, 15);
             this.Btn_Back.Name = "Btn_Back";
             this.Btn_Back.Size = new System.Drawing.Size(72, 30);
             this.Btn_Back.TabIndex = 18;
@@ -116,7 +120,7 @@
             // 
             this.L_Filename.AutoSize = true;
             this.L_Filename.Enabled = false;
-            this.L_Filename.Location = new System.Drawing.Point(166, 388);
+            this.L_Filename.Location = new System.Drawing.Point(130, 390);
             this.L_Filename.Name = "L_Filename";
             this.L_Filename.Size = new System.Drawing.Size(54, 13);
             this.L_Filename.TabIndex = 17;
@@ -126,7 +130,7 @@
             // 
             this.TB_Email.Enabled = false;
             this.TB_Email.Font = new System.Drawing.Font("MS UI Gothic", 27.75F);
-            this.TB_Email.Location = new System.Drawing.Point(498, 311);
+            this.TB_Email.Location = new System.Drawing.Point(462, 313);
             this.TB_Email.Name = "TB_Email";
             this.TB_Email.ReadOnly = true;
             this.TB_Email.Size = new System.Drawing.Size(10, 44);
@@ -136,7 +140,7 @@
             // 
             this.TB_Phone.Enabled = false;
             this.TB_Phone.Font = new System.Drawing.Font("MS UI Gothic", 27.75F);
-            this.TB_Phone.Location = new System.Drawing.Point(498, 226);
+            this.TB_Phone.Location = new System.Drawing.Point(462, 228);
             this.TB_Phone.Name = "TB_Phone";
             this.TB_Phone.ReadOnly = true;
             this.TB_Phone.Size = new System.Drawing.Size(10, 44);
@@ -146,7 +150,7 @@
             // 
             this.TB_Title.Enabled = false;
             this.TB_Title.Font = new System.Drawing.Font("MS UI Gothic", 27.75F);
-            this.TB_Title.Location = new System.Drawing.Point(498, 148);
+            this.TB_Title.Location = new System.Drawing.Point(462, 150);
             this.TB_Title.Name = "TB_Title";
             this.TB_Title.ReadOnly = true;
             this.TB_Title.Size = new System.Drawing.Size(10, 44);
@@ -156,7 +160,7 @@
             // 
             this.TB_Name.Enabled = false;
             this.TB_Name.Font = new System.Drawing.Font("MS UI Gothic", 27.75F);
-            this.TB_Name.Location = new System.Drawing.Point(498, 67);
+            this.TB_Name.Location = new System.Drawing.Point(462, 69);
             this.TB_Name.Name = "TB_Name";
             this.TB_Name.ReadOnly = true;
             this.TB_Name.Size = new System.Drawing.Size(10, 44);
@@ -164,9 +168,10 @@
             // 
             // Btn_Submit
             // 
-            this.Btn_Submit.BackColor = System.Drawing.Color.Red;
-            this.Btn_Submit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Submit.Location = new System.Drawing.Point(987, 14);
+            this.Btn_Submit.BackColor = System.Drawing.Color.LightGreen;
+            this.Btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Submit.Location = new System.Drawing.Point(951, 16);
             this.Btn_Submit.Name = "Btn_Submit";
             this.Btn_Submit.Size = new System.Drawing.Size(72, 30);
             this.Btn_Submit.TabIndex = 11;
@@ -176,9 +181,10 @@
             // 
             // Btn_UpdatePic
             // 
-            this.Btn_UpdatePic.BackColor = System.Drawing.Color.Red;
-            this.Btn_UpdatePic.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.Btn_UpdatePic.Location = new System.Drawing.Point(52, 378);
+            this.Btn_UpdatePic.BackColor = System.Drawing.Color.Moccasin;
+            this.Btn_UpdatePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_UpdatePic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_UpdatePic.Location = new System.Drawing.Point(16, 380);
             this.Btn_UpdatePic.Name = "Btn_UpdatePic";
             this.Btn_UpdatePic.Size = new System.Drawing.Size(108, 30);
             this.Btn_UpdatePic.TabIndex = 10;
@@ -190,7 +196,7 @@
             // 
             this.PB_ProfilePic.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background1;
             this.PB_ProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PB_ProfilePic.Location = new System.Drawing.Point(52, 63);
+            this.PB_ProfilePic.Location = new System.Drawing.Point(16, 65);
             this.PB_ProfilePic.Name = "PB_ProfilePic";
             this.PB_ProfilePic.Size = new System.Drawing.Size(278, 292);
             this.PB_ProfilePic.TabIndex = 9;
@@ -202,7 +208,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 36F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(336, 307);
+            this.label6.Location = new System.Drawing.Point(308, 307);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 48);
             this.label6.TabIndex = 8;
@@ -213,7 +219,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 36F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(336, 220);
+            this.label7.Location = new System.Drawing.Point(300, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 48);
             this.label7.TabIndex = 7;
@@ -224,7 +230,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 36F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(336, 142);
+            this.label8.Location = new System.Drawing.Point(300, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 48);
             this.label8.TabIndex = 6;
@@ -235,7 +241,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("MS UI Gothic", 36F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(336, 63);
+            this.label9.Location = new System.Drawing.Point(300, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 48);
             this.label9.TabIndex = 5;
@@ -250,9 +256,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Inventory_Tracking_and_Managment.Properties.Resources.Background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1215, 373);
+            this.pictureBox1.Location = new System.Drawing.Point(1304, 454);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 244);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
