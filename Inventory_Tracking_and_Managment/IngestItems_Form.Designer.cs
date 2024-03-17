@@ -69,14 +69,14 @@
             // 
             // TBIF_Name
             // 
-            this.TBIF_Name.Location = new System.Drawing.Point(700, 75);
+            this.TBIF_Name.Location = new System.Drawing.Point(700, 96);
             this.TBIF_Name.Name = "TBIF_Name";
             this.TBIF_Name.Size = new System.Drawing.Size(351, 20);
             this.TBIF_Name.TabIndex = 1;
             // 
             // TBIF_Description
             // 
-            this.TBIF_Description.Location = new System.Drawing.Point(700, 101);
+            this.TBIF_Description.Location = new System.Drawing.Point(700, 122);
             this.TBIF_Description.Multiline = true;
             this.TBIF_Description.Name = "TBIF_Description";
             this.TBIF_Description.Size = new System.Drawing.Size(351, 93);
@@ -84,14 +84,14 @@
             // 
             // TBIF_Serial
             // 
-            this.TBIF_Serial.Location = new System.Drawing.Point(700, 266);
+            this.TBIF_Serial.Location = new System.Drawing.Point(700, 287);
             this.TBIF_Serial.Name = "TBIF_Serial";
             this.TBIF_Serial.Size = new System.Drawing.Size(351, 20);
             this.TBIF_Serial.TabIndex = 4;
             // 
             // TBIF_Ro
             // 
-            this.TBIF_Ro.Location = new System.Drawing.Point(700, 296);
+            this.TBIF_Ro.Location = new System.Drawing.Point(700, 317);
             this.TBIF_Ro.Name = "TBIF_Ro";
             this.TBIF_Ro.Size = new System.Drawing.Size(351, 20);
             this.TBIF_Ro.TabIndex = 5;
@@ -126,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label2.Location = new System.Drawing.Point(494, 60);
+            this.label2.Location = new System.Drawing.Point(494, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 35);
             this.label2.TabIndex = 11;
@@ -136,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label4.Location = new System.Drawing.Point(494, 101);
+            this.label4.Location = new System.Drawing.Point(494, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(188, 35);
             this.label4.TabIndex = 12;
@@ -146,7 +146,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label8.Location = new System.Drawing.Point(494, 189);
+            this.label8.Location = new System.Drawing.Point(494, 210);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 35);
             this.label8.TabIndex = 13;
@@ -156,7 +156,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label10.Location = new System.Drawing.Point(494, 250);
+            this.label10.Location = new System.Drawing.Point(494, 271);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 35);
             this.label10.TabIndex = 14;
@@ -166,7 +166,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label11.Location = new System.Drawing.Point(494, 281);
+            this.label11.Location = new System.Drawing.Point(494, 302);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 35);
             this.label11.TabIndex = 15;
@@ -176,7 +176,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.label12.Location = new System.Drawing.Point(494, 316);
+            this.label12.Location = new System.Drawing.Point(494, 337);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 35);
             this.label12.TabIndex = 16;
@@ -187,7 +187,7 @@
             this.Btn_GenerateTagID.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Btn_GenerateTagID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_GenerateTagID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_GenerateTagID.Location = new System.Drawing.Point(790, 322);
+            this.Btn_GenerateTagID.Location = new System.Drawing.Point(790, 343);
             this.Btn_GenerateTagID.Name = "Btn_GenerateTagID";
             this.Btn_GenerateTagID.Size = new System.Drawing.Size(192, 36);
             this.Btn_GenerateTagID.TabIndex = 17;
@@ -217,7 +217,7 @@
             "Good",
             "Needs Repair",
             "Broken"});
-            this.CBIF_Condition.Location = new System.Drawing.Point(700, 203);
+            this.CBIF_Condition.Location = new System.Drawing.Point(700, 224);
             this.CBIF_Condition.Name = "CBIF_Condition";
             this.CBIF_Condition.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Condition.TabIndex = 19;
@@ -227,7 +227,7 @@
             this.Btn_ClearAllFields.BackColor = System.Drawing.Color.LightCoral;
             this.Btn_ClearAllFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ClearAllFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ClearAllFields.Location = new System.Drawing.Point(838, 364);
+            this.Btn_ClearAllFields.Location = new System.Drawing.Point(838, 385);
             this.Btn_ClearAllFields.Name = "Btn_ClearAllFields";
             this.Btn_ClearAllFields.Size = new System.Drawing.Size(92, 33);
             this.Btn_ClearAllFields.TabIndex = 20;
@@ -248,7 +248,7 @@
             // 
             this.LIF_Location.AutoSize = true;
             this.LIF_Location.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.LIF_Location.Location = new System.Drawing.Point(494, 221);
+            this.LIF_Location.Location = new System.Drawing.Point(494, 242);
             this.LIF_Location.Name = "LIF_Location";
             this.LIF_Location.Size = new System.Drawing.Size(149, 35);
             this.LIF_Location.TabIndex = 22;
@@ -258,7 +258,7 @@
             // 
             this.CBIF_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBIF_Location.FormattingEnabled = true;
-            this.CBIF_Location.Location = new System.Drawing.Point(700, 235);
+            this.CBIF_Location.Location = new System.Drawing.Point(700, 256);
             this.CBIF_Location.Name = "CBIF_Location";
             this.CBIF_Location.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Location.TabIndex = 23;
