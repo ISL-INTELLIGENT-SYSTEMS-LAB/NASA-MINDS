@@ -125,6 +125,7 @@ namespace Inventory_Tracking_and_Managment
             string contact = TB_Phone.Text + "," + TB_Email.Text;
             string image;
 
+            
             // Update the Account information in the database
             if (L_Filename.Text != "File Name")
             {
@@ -140,6 +141,8 @@ namespace Inventory_Tracking_and_Managment
 
             // Update the account information in the database
             sqliteDataAccess.UpdateAccount(accountID, name, title, contact, image);
+
+            Login_Form.account.Picture = image;
 
             // Display a message box to the user that the account infromation has been updated
             MessageBox.Show("Account Information has been Updated in database", "Update Successful!");

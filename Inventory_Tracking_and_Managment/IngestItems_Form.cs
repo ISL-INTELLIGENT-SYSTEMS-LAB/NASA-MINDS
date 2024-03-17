@@ -120,9 +120,9 @@ namespace Inventory_Tracking_and_Managment
             sqliteDataAccess.InsertItemLocation(itemID, locationID, accountID, datestring);
 
             // Clear all fields
-            CBIF_Condition.Text = "";
+            CBIF_Condition.SelectedIndex = -1;
             TBIF_Description.Text = "";
-            CBIF_Location.Text = "";
+            CBIF_Location.SelectedIndex = -1;
             TBIF_Name.Text = "";
             TBIF_Serial.Text = "";
             Btn_GenerateTagID.Text = "Generate ID #";
@@ -133,9 +133,9 @@ namespace Inventory_Tracking_and_Managment
 
         private void Btn_ClearAllFields_Click(object sender, EventArgs e)
         {
-            CBIF_Condition.Text = "";
+            CBIF_Condition.SelectedIndex = -1;
             TBIF_Description.Text = "";
-            CBIF_Location.Text = "";
+            CBIF_Location.SelectedIndex = -1;
             TBIF_Name.Text = "";
             TBIF_Serial.Text = "";
             Btn_GenerateTagID.Text = "Generate ID #";
