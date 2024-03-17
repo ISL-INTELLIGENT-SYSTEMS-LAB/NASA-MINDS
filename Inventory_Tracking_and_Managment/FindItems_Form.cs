@@ -45,7 +45,7 @@ namespace Inventory_Tracking_and_Managment
 
             // Pull items location from database and display in RTB_Location
             ItemLocation itemLocation = sqliteDataAccess.GetItemLocation(items[CB_ItemSearch.SelectedIndex].ItemID);
-            string location = locations.Find(x => x.LocationID == itemLocation.Location).LocationName;
+            string location = sqliteDataAccess.GetLocation(itemLocation.Location).LocationName;
 
             // Display the location of the item in the rich text box by sercing for the itemid in the locations list
             TB_ItemLocation.Text = location;
