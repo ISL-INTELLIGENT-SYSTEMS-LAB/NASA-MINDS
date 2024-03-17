@@ -48,7 +48,7 @@ namespace Inventory_Tracking_and_Managment
             string location = locations.Find(x => x.LocationID == itemLocation.Location).LocationName;
 
             // Display the location of the item in the rich text box by sercing for the itemid in the locations list
-            RTB_Location.Text = location;
+            TB_ItemLocation.Text = location;
 
             // Use a switch statement to display the condition of the item in the label
             int condition = items[CB_ItemSearch.SelectedIndex].Condition;

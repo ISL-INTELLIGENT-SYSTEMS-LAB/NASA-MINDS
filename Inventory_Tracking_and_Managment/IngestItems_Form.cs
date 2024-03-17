@@ -156,10 +156,5 @@ namespace Inventory_Tracking_and_Managment
                 CBIF_Location.Items.Add(location.LocationName);
             }
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
