@@ -320,7 +320,7 @@ namespace NASA_MINDS_Library
             }
         }
 
-        // Get specific items from the database
+        // Get specific item using item ID from the database
         public static Item GetItem(int itemID)
         {
             // Open a connection to the database
@@ -331,6 +331,44 @@ namespace NASA_MINDS_Library
                 // Create a command to select the item from the database
                 var cmd = new SQLiteCommand("SELECT * FROM Items WHERE itemID=@itemID", con);
                 cmd.Parameters.AddWithValue("@itemID", itemID);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                // If the item is not found, return null
+                if (!rdr.HasRows)
+                {
+                    rdr.Close();
+                    con.Close();
+                    return null;
+                }
+
+                // Create an item object from the data
+                Item item;
+                rdr.Read();
+                item = new Item(Convert.ToInt32(rdr["itemID"]),
+                                                rdr["itemName"].ToString(),
+                                                rdr["itemDescription"].ToString(),
+                                                rdr["serial"].ToString(),
+                                                Convert.ToInt32(rdr["conditionalStatus"]),
+                                                rdr["RN"].ToString(),
+                                                rdr["imageLocation"].ToString(),
+                                                Convert.ToInt32(rdr["RFID_Tag"]));
+                rdr.Close();
+                con.Close();
+                return item;
+            }
+        }
+
+        // Get specific items using item name from the database
+        public static Item GetItem(string itemName)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to select the item from the database
+                var cmd = new SQLiteCommand("SELECT * FROM Items WHERE itemName=@itemName", con);
+                cmd.Parameters.AddWithValue("@itemName", itemName);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
 
                 // If the item is not found, return null
@@ -424,6 +462,28 @@ namespace NASA_MINDS_Library
                 var cmd = new SQLiteCommand("UPDATE ItemLocation SET locationID=@locationID WHERE itemID=@itemID", con);
                 cmd.Parameters.AddWithValue("@locationID", locationID);
                 cmd.Parameters.AddWithValue("@itemID", itemID);
+
+                // Execute the command and close the connection to the database
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
+            }
+        }
+
+        // Insert item location into the database
+        public static void InsertItemLocation(int itemID, int locationID, int accountID, string recordDate)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to insert the item location into the database
+                var cmd = new SQLiteCommand("INSERT INTO ItemLocation (itemID, locationID, accountID, recordDate) VALUES (@itemID, @locationID, @accountID, @recordDate)", con);
+                cmd.Parameters.AddWithValue("@itemID", itemID);
+                cmd.Parameters.AddWithValue("@locationID", locationID);
+                cmd.Parameters.AddWithValue("@accountID", accountID);
+                cmd.Parameters.AddWithValue("@recordDate", recordDate);
 
                 // Execute the command and close the connection to the database
                 cmd.ExecuteNonQuery();
