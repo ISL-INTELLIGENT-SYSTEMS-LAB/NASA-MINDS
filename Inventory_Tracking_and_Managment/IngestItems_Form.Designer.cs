@@ -84,14 +84,14 @@
             // 
             // TBIF_Serial
             // 
-            this.TBIF_Serial.Location = new System.Drawing.Point(700, 287);
+            this.TBIF_Serial.Location = new System.Drawing.Point(700, 281);
             this.TBIF_Serial.Name = "TBIF_Serial";
             this.TBIF_Serial.Size = new System.Drawing.Size(351, 20);
             this.TBIF_Serial.TabIndex = 4;
             // 
             // TBIF_Ro
             // 
-            this.TBIF_Ro.Location = new System.Drawing.Point(700, 317);
+            this.TBIF_Ro.Location = new System.Drawing.Point(700, 311);
             this.TBIF_Ro.Name = "TBIF_Ro";
             this.TBIF_Ro.Size = new System.Drawing.Size(351, 20);
             this.TBIF_Ro.TabIndex = 5;
@@ -217,7 +217,7 @@
             "Good",
             "Needs Repair",
             "Broken"});
-            this.CBIF_Condition.Location = new System.Drawing.Point(700, 224);
+            this.CBIF_Condition.Location = new System.Drawing.Point(700, 222);
             this.CBIF_Condition.Name = "CBIF_Condition";
             this.CBIF_Condition.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Condition.TabIndex = 19;
@@ -248,7 +248,7 @@
             // 
             this.LIF_Location.AutoSize = true;
             this.LIF_Location.Font = new System.Drawing.Font("MS UI Gothic", 26.25F);
-            this.LIF_Location.Location = new System.Drawing.Point(494, 242);
+            this.LIF_Location.Location = new System.Drawing.Point(494, 241);
             this.LIF_Location.Name = "LIF_Location";
             this.LIF_Location.Size = new System.Drawing.Size(149, 35);
             this.LIF_Location.TabIndex = 22;
@@ -258,7 +258,7 @@
             // 
             this.CBIF_Location.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBIF_Location.FormattingEnabled = true;
-            this.CBIF_Location.Location = new System.Drawing.Point(700, 256);
+            this.CBIF_Location.Location = new System.Drawing.Point(700, 251);
             this.CBIF_Location.Name = "CBIF_Location";
             this.CBIF_Location.Size = new System.Drawing.Size(351, 21);
             this.CBIF_Location.TabIndex = 23;

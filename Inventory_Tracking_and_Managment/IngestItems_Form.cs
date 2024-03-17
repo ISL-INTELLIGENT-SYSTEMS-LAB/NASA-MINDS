@@ -50,6 +50,12 @@ namespace Inventory_Tracking_and_Managment
                 PBIF_Pic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
                 LIF_Filename.Text = System.IO.Path.GetFileName(openFileDialog1.FileName);
             }
+
+            // Save image to images folder
+            string currentDir = Environment.CurrentDirectory;
+            string sourceFile = openFileDialog1.FileName;
+            string destFile = currentDir + "\\images\\" + LIF_Filename.Text;
+            System.IO.File.Copy(sourceFile, destFile, true);
         }
         // Return to the main menu
         private void BtnIF_Back_Click(object sender, EventArgs e)
@@ -95,11 +101,23 @@ namespace Inventory_Tracking_and_Managment
 
             string filename = LIF_Filename.Text;
             string register = TBIF_Ro.Text.ToString();
-            //string image = PBIF_Pic.BackgroundImage;
+            // string image = PBIF_Pic.BackgroundImage;
 
             // Add the item to the database using InsertItem method
             sqliteDataAccess.InsertItem(name, description, serial, conditionint, register, filename, tagID);
             MessageBox.Show("Item has been added to the database");
+
+            // Add item location into the database
+            Item item = sqliteDataAccess.GetItem(name);
+            int itemID = item.ItemID;
+            int locationID = CBIF_Location.SelectedIndex;
+            int accountID = Login_Form.account.AccountID;
+            
+            // Get current date and time
+            DateTime date = DateTime.Now;
+            string datestring = date.ToString("yyyy-MM-dd");
+
+            sqliteDataAccess.InsertItemLocation(itemID, locationID, accountID, datestring);
 
             // Clear all fields
             CBIF_Condition.Text = "";
@@ -112,6 +130,7 @@ namespace Inventory_Tracking_and_Managment
             LIF_Filename.Text = "";
             TBIF_Ro.Text = "";
         }
+
         private void Btn_ClearAllFields_Click(object sender, EventArgs e)
         {
             CBIF_Condition.Text = "";
@@ -146,6 +165,7 @@ namespace Inventory_Tracking_and_Managment
             }
             Btn_GenerateTagID.Text = tagID.ToString();
         }
+
         // Set the location of the item
         private void populateLocations()
         {

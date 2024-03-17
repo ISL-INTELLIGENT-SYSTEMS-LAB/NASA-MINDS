@@ -67,6 +67,12 @@ namespace Inventory_Tracking_and_Managment
                 PB_ProfilePic.BackgroundImage = new Bitmap(openFileDialog1.FileName);
                 L_Filename.Text = System.IO.Path.GetFileName(openFileDialog1.FileName);
             }
+
+            // Save image to images folder
+            string currentDir = Environment.CurrentDirectory;
+            string sourceFile = openFileDialog1.FileName;
+            string destFile = currentDir + "\\images\\" + L_Filename.Text;
+            System.IO.File.Copy(sourceFile, destFile, true);
         }
 
         private void Btn_EditProfile_Click(object sender, EventArgs e)
