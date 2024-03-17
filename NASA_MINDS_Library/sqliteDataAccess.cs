@@ -411,5 +411,25 @@ namespace NASA_MINDS_Library
                 return;
             }
         }
+
+        // Update item locationid in the database
+        public static void UpdateItemLocation(int itemID, int locationID)
+        {
+            // Open a connection to the database
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+
+                // Create a command to update the item location in the database
+                var cmd = new SQLiteCommand("UPDATE ItemLocation SET locationID=@locationID WHERE itemID=@itemID", con);
+                cmd.Parameters.AddWithValue("@locationID", locationID);
+                cmd.Parameters.AddWithValue("@itemID", itemID);
+
+                // Execute the command and close the connection to the database
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
+            }
+        }
     }
 }
